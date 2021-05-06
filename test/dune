@@ -1,0 +1,3 @@
+(test
+ (name wikidata_tests)
+ (libraries cohttp-lwt-unix atdgen-runtime alcotest wikidata))

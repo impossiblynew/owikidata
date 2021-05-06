@@ -1,0 +1,617 @@
+{
+    "pageid": 988003,
+    "ns": 0,
+    "title": "Q1038788",
+    "lastrevid": 1315534479,
+    "modified": "2020-11-30T03:29:18Z",
+    "type": "item",
+    "id": "Q1038788",
+    "labels": {
+        "pt": {
+            "language": "pt",
+            "value": "Colapso da passarela do Hyatt Regency"
+        },
+        "ja": {
+            "language": "ja",
+            "value": "\u30cf\u30a4\u30a2\u30c3\u30c8\u30ea\u30fc\u30b8\u30a7\u30f3\u30b7\u30fc\u7a7a\u4e2d\u901a\u8def\u843d\u4e0b\u4e8b\u6545"
+        },
+        "ko": {
+            "language": "ko",
+            "value": "\ud558\uc58f\ud2b8 \ub9ac\uc820\uc2dc \ud638\ud154 \uace0\uac00 \ud1b5\ub85c \ubd95\uad34 \uc0ac\uace0"
+        },
+        "en": {
+            "language": "en",
+            "value": "Hyatt Regency walkway collapse"
+        },
+        "ru": {
+            "language": "ru",
+            "value": "\u041e\u0431\u0440\u0443\u0448\u0435\u043d\u0438\u0435 \u043f\u043e\u0434\u0432\u0435\u0441\u043d\u044b\u0445 \u0433\u0430\u043b\u0435\u0440\u0435\u0439 \u0432 \u043e\u0442\u0435\u043b\u0435 \u00abHyatt Regency\u00bb"
+        },
+        "zh": {
+            "language": "zh",
+            "value": "\u5012\u584c"
+        },
+        "zh-hant": {
+            "language": "zh-hant",
+            "value": "\u51f1\u6085\u9152\u5e97\u8d70\u9053\u5012\u584c\u4e8b\u4ef6"
+        },
+        "zh-cn": {
+            "language": "zh-cn",
+            "value": "\u51ef\u60a6\u9152\u5e97\u8d70\u9053\u5012\u584c\u4e8b\u4ef6"
+        },
+        "fa": {
+            "language": "fa",
+            "value": "Hyatt Regency walkway collapse"
+        },
+        "zh-hans": {
+            "language": "zh-hans",
+            "value": "\u51ef\u60a6\u9152\u5e97\u8d70\u9053\u5012\u584c\u4e8b\u4ef6"
+        },
+        "id": {
+            "language": "id",
+            "value": "Keruntuhan selasar Hyatt Regency"
+        },
+        "vi": {
+            "language": "vi",
+            "value": "V\u1ee5 s\u1eadp \u0111\u01b0\u1eddng \u0111i b\u1ed9 Hyatt Regency"
+        },
+        "fr": {
+            "language": "fr",
+            "value": "Effondrement des passerelles du Hyatt Regency"
+        },
+        "ar": {
+            "language": "ar",
+            "value": "\u0627\u0646\u0647\u064a\u0627\u0631 \u0641\u0646\u062f\u0642 \u062d\u064a\u0627\u0629 \u0631\u064a\u062c\u0646\u0633\u064a \u0641\u064a \u0643\u0627\u0646\u0633\u0627\u0633 \u0633\u064a\u062a\u064a"
+        }
+    },
+    "descriptions": {
+        "en": {
+            "language": "en",
+            "value": "1981 structural collapse in Kansas City, Missouri"
+        }
+    },
+    "aliases": {
+        "ja": [
+            {
+                "language": "ja",
+                "value": "\u30cf\u30a4\u30a2\u30c3\u30c8\u30ea\u30fc\u30b8\u30a7\u30f3\u30b7\u30fc\u6b69\u9053\u6a4b\u843d\u4e0b\u4e8b\u6545"
+            }
+        ],
+        "ko": [
+            {
+                "language": "ko",
+                "value": "\ud558\uc58f\ud2b8 \ub9ac\uc820\uc2dc \ud638\ud154 \ub09c\uac04 \ubd95\uad34 \uc0ac\uac74"
+            },
+            {
+                "language": "ko",
+                "value": "\ud558\uc58f\ud2b8 \ub9ac\uc820\uc2dc \ud638\ud154 \uace0\uac00 \ud1b5\ub85c \ubd95\uad34 \uc0ac\uac74"
+            }
+        ],
+        "zh": [
+            {
+                "language": "zh",
+                "value": "\u7f8e\u570b\u51f1\u6085\u98ef\u5e97\u4e8b\u6545"
+            },
+            {
+                "language": "zh",
+                "value": "\u51f1\u6085\u582a\u85a9\u65af\u57ce\u98ef\u5e97\u5929\u6a4b\u574d\u584c\u610f\u5916"
+            },
+            {
+                "language": "zh",
+                "value": "\u51f1\u6085\u9152\u5e97\u8d70\u9053\u5012\u584c\u4e8b\u4ef6"
+            },
+            {
+                "language": "zh",
+                "value": "\u582a\u85a9\u65af\u57ce\u51f1\u6085\u9152\u5e97\u5929\u6a4b\u574d\u584c\u4e8b\u6545"
+            }
+        ]
+    },
+    "claims": {
+        "P625": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P625",
+                    "datavalue": {
+                        "value": {
+                            "latitude": 39.085,
+                            "longitude": -94.58,
+                            "altitude": null,
+                            "precision": 0.001,
+                            "globe": "http://www.wikidata.org/entity/Q2"
+                        },
+                        "type": "globecoordinate"
+                    },
+                    "datatype": "globe-coordinate"
+                },
+                "type": "statement",
+                "id": "q1038788$22646213-A3DF-431F-B1DC-5D45152F9D33",
+                "rank": "normal",
+                "references": [
+                    {
+                        "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+                        "snaks": {
+                            "P143": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P143",
+                                    "datavalue": {
+                                        "value": {
+                                            "entity-type": "item",
+                                            "numeric-id": 328,
+                                            "id": "Q328"
+                                        },
+                                        "type": "wikibase-entityid"
+                                    },
+                                    "datatype": "wikibase-item"
+                                }
+                            ]
+                        },
+                        "snaks-order": [
+                            "P143"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "P17": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P17",
+                    "datavalue": {
+                        "value": {
+                            "entity-type": "item",
+                            "numeric-id": 30,
+                            "id": "Q30"
+                        },
+                        "type": "wikibase-entityid"
+                    },
+                    "datatype": "wikibase-item"
+                },
+                "type": "statement",
+                "id": "q1038788$9F645486-9E79-4888-9D37-F13ABF274031",
+                "rank": "normal",
+                "references": [
+                    {
+                        "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+                        "snaks": {
+                            "P143": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P143",
+                                    "datavalue": {
+                                        "value": {
+                                            "entity-type": "item",
+                                            "numeric-id": 328,
+                                            "id": "Q328"
+                                        },
+                                        "type": "wikibase-entityid"
+                                    },
+                                    "datatype": "wikibase-item"
+                                }
+                            ]
+                        },
+                        "snaks-order": [
+                            "P143"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "P131": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P131",
+                    "datavalue": {
+                        "value": {
+                            "entity-type": "item",
+                            "numeric-id": 1581,
+                            "id": "Q1581"
+                        },
+                        "type": "wikibase-entityid"
+                    },
+                    "datatype": "wikibase-item"
+                },
+                "type": "statement",
+                "id": "q1038788$C05C3BFC-EAB7-4FDD-A8CF-396046C99803",
+                "rank": "normal",
+                "references": [
+                    {
+                        "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+                        "snaks": {
+                            "P143": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P143",
+                                    "datavalue": {
+                                        "value": {
+                                            "entity-type": "item",
+                                            "numeric-id": 328,
+                                            "id": "Q328"
+                                        },
+                                        "type": "wikibase-entityid"
+                                    },
+                                    "datatype": "wikibase-item"
+                                }
+                            ]
+                        },
+                        "snaks-order": [
+                            "P143"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "P646": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P646",
+                    "datavalue": {
+                        "value": "/m/03rsj6",
+                        "type": "string"
+                    },
+                    "datatype": "external-id"
+                },
+                "type": "statement",
+                "id": "Q1038788$30C483E0-99E8-4F24-A563-A51835867517",
+                "rank": "normal",
+                "references": [
+                    {
+                        "hash": "2b00cb481cddcac7623114367489b5c194901c4a",
+                        "snaks": {
+                            "P248": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P248",
+                                    "datavalue": {
+                                        "value": {
+                                            "entity-type": "item",
+                                            "numeric-id": 15241312,
+                                            "id": "Q15241312"
+                                        },
+                                        "type": "wikibase-entityid"
+                                    },
+                                    "datatype": "wikibase-item"
+                                }
+                            ],
+                            "P577": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P577",
+                                    "datavalue": {
+                                        "value": {
+                                            "time": "+2013-10-28T00:00:00Z",
+                                            "timezone": 0,
+                                            "before": 0,
+                                            "after": 0,
+                                            "precision": 11,
+                                            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                        },
+                                        "type": "time"
+                                    },
+                                    "datatype": "time"
+                                }
+                            ]
+                        },
+                        "snaks-order": [
+                            "P248",
+                            "P577"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "P373": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P373",
+                    "datavalue": {
+                        "value": "Hyatt Regency walkway collapse",
+                        "type": "string"
+                    },
+                    "datatype": "string"
+                },
+                "type": "statement",
+                "id": "Q1038788$51b6b178-4af7-74c9-3a32-7053146d0a7f",
+                "rank": "normal"
+            }
+        ],
+        "P31": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P31",
+                    "datavalue": {
+                        "value": {
+                            "entity-type": "item",
+                            "numeric-id": 1309431,
+                            "id": "Q1309431"
+                        },
+                        "type": "wikibase-entityid"
+                    },
+                    "datatype": "wikibase-item"
+                },
+                "type": "statement",
+                "id": "Q1038788$5153d004-4e2c-8866-95d8-bcd54213f83e",
+                "rank": "normal",
+                "references": [
+                    {
+                        "hash": "d3e3ee3ae214c7c4161a6586e0e54e300fd94f2a",
+                        "snaks": {
+                            "P854": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P854",
+                                    "datavalue": {
+                                        "value": "http://www.kansascity.com/news/local/article44479488.html",
+                                        "type": "string"
+                                    },
+                                    "datatype": "url"
+                                }
+                            ]
+                        },
+                        "snaks-order": [
+                            "P854"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "P1120": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P1120",
+                    "datavalue": {
+                        "value": {
+                            "amount": "+114",
+                            "unit": "1"
+                        },
+                        "type": "quantity"
+                    },
+                    "datatype": "quantity"
+                },
+                "type": "statement",
+                "id": "Q1038788$a18abc06-4a7d-c610-0e8c-593b6e84d295",
+                "rank": "normal",
+                "references": [
+                    {
+                        "hash": "d3e3ee3ae214c7c4161a6586e0e54e300fd94f2a",
+                        "snaks": {
+                            "P854": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P854",
+                                    "datavalue": {
+                                        "value": "http://www.kansascity.com/news/local/article44479488.html",
+                                        "type": "string"
+                                    },
+                                    "datatype": "url"
+                                }
+                            ]
+                        },
+                        "snaks-order": [
+                            "P854"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "P585": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P585",
+                    "datavalue": {
+                        "value": {
+                            "time": "+1981-07-17T00:00:00Z",
+                            "timezone": 0,
+                            "before": 0,
+                            "after": 0,
+                            "precision": 11,
+                            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                        },
+                        "type": "time"
+                    },
+                    "datatype": "time"
+                },
+                "type": "statement",
+                "id": "Q1038788$98a20706-434e-f119-b4ef-ceeb85323b2b",
+                "rank": "normal",
+                "references": [
+                    {
+                        "hash": "d3e3ee3ae214c7c4161a6586e0e54e300fd94f2a",
+                        "snaks": {
+                            "P854": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P854",
+                                    "datavalue": {
+                                        "value": "http://www.kansascity.com/news/local/article44479488.html",
+                                        "type": "string"
+                                    },
+                                    "datatype": "url"
+                                }
+                            ]
+                        },
+                        "snaks-order": [
+                            "P854"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "P18": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P18",
+                    "datavalue": {
+                        "value": "Hyatt Regency collapse end view.PNG",
+                        "type": "string"
+                    },
+                    "datatype": "commonsMedia"
+                },
+                "type": "statement",
+                "id": "Q1038788$7BC1C358-AF06-4E11-A8E0-FE54AF3A6020",
+                "rank": "normal",
+                "references": [
+                    {
+                        "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+                        "snaks": {
+                            "P143": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P143",
+                                    "datavalue": {
+                                        "value": {
+                                            "entity-type": "item",
+                                            "numeric-id": 328,
+                                            "id": "Q328"
+                                        },
+                                        "type": "wikibase-entityid"
+                                    },
+                                    "datatype": "wikibase-item"
+                                }
+                            ]
+                        },
+                        "snaks-order": [
+                            "P143"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "P276": [
+            {
+                "mainsnak": {
+                    "snaktype": "value",
+                    "property": "P276",
+                    "datavalue": {
+                        "value": {
+                            "entity-type": "item",
+                            "numeric-id": 41819,
+                            "id": "Q41819"
+                        },
+                        "type": "wikibase-entityid"
+                    },
+                    "datatype": "wikibase-item"
+                },
+                "type": "statement",
+                "id": "Q1038788$B3100B86-CFF2-439F-9DCB-D75772675C86",
+                "rank": "normal",
+                "references": [
+                    {
+                        "hash": "2a6c3e91afd36a4247a96d9a7d355cc325131601",
+                        "snaks": {
+                            "P143": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P143",
+                                    "datavalue": {
+                                        "value": {
+                                            "entity-type": "item",
+                                            "numeric-id": 328,
+                                            "id": "Q328"
+                                        },
+                                        "type": "wikibase-entityid"
+                                    },
+                                    "datatype": "wikibase-item"
+                                }
+                            ],
+                            "P4656": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P4656",
+                                    "datavalue": {
+                                        "value": "https://en.wikipedia.org/w/index.php?title=Hyatt_Regency_walkway_collapse&oldid=850932642",
+                                        "type": "string"
+                                    },
+                                    "datatype": "url"
+                                }
+                            ]
+                        },
+                        "snaks-order": [
+                            "P143",
+                            "P4656"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "sitelinks": {
+        "arwiki": {
+            "site": "arwiki",
+            "title": "\u0627\u0646\u0647\u064a\u0627\u0631 \u0641\u0646\u062f\u0642 \u062d\u064a\u0627\u0629 \u0631\u064a\u062c\u0646\u0633\u064a \u0641\u064a \u0643\u0627\u0646\u0633\u0627\u0633 \u0633\u064a\u062a\u064a",
+            "badges": [],
+            "url": "https://ar.wikipedia.org/wiki/%D8%A7%D9%86%D9%87%D9%8A%D8%A7%D8%B1_%D9%81%D9%86%D8%AF%D9%82_%D8%AD%D9%8A%D8%A7%D8%A9_%D8%B1%D9%8A%D8%AC%D9%86%D8%B3%D9%8A_%D9%81%D9%8A_%D9%83%D8%A7%D9%86%D8%B3%D8%A7%D8%B3_%D8%B3%D9%8A%D8%AA%D9%8A"
+        },
+        "commonswiki": {
+            "site": "commonswiki",
+            "title": "Category:Hyatt Regency walkway collapse",
+            "badges": [],
+            "url": "https://commons.wikimedia.org/wiki/Category:Hyatt_Regency_walkway_collapse"
+        },
+        "enwiki": {
+            "site": "enwiki",
+            "title": "Hyatt Regency walkway collapse",
+            "badges": [],
+            "url": "https://en.wikipedia.org/wiki/Hyatt_Regency_walkway_collapse"
+        },
+        "frwiki": {
+            "site": "frwiki",
+            "title": "Effondrement des passerelles du Hyatt Regency",
+            "badges": [],
+            "url": "https://fr.wikipedia.org/wiki/Effondrement_des_passerelles_du_Hyatt_Regency"
+        },
+        "idwiki": {
+            "site": "idwiki",
+            "title": "Keruntuhan selasar Hyatt Regency",
+            "badges": [],
+            "url": "https://id.wikipedia.org/wiki/Keruntuhan_selasar_Hyatt_Regency"
+        },
+        "jawiki": {
+            "site": "jawiki",
+            "title": "\u30cf\u30a4\u30a2\u30c3\u30c8\u30ea\u30fc\u30b8\u30a7\u30f3\u30b7\u30fc\u7a7a\u4e2d\u901a\u8def\u843d\u4e0b\u4e8b\u6545",
+            "badges": [],
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8F%E3%82%A4%E3%82%A2%E3%83%83%E3%83%88%E3%83%AA%E3%83%BC%E3%82%B8%E3%82%A7%E3%83%B3%E3%82%B7%E3%83%BC%E7%A9%BA%E4%B8%AD%E9%80%9A%E8%B7%AF%E8%90%BD%E4%B8%8B%E4%BA%8B%E6%95%85"
+        },
+        "kowiki": {
+            "site": "kowiki",
+            "title": "\ud558\uc58f\ud2b8 \ub9ac\uc820\uc2dc \ud638\ud154 \uace0\uac00 \ud1b5\ub85c \ubd95\uad34 \uc0ac\uace0",
+            "badges": [],
+            "url": "https://ko.wikipedia.org/wiki/%ED%95%98%EC%96%8F%ED%8A%B8_%EB%A6%AC%EC%A0%A0%EC%8B%9C_%ED%98%B8%ED%85%94_%EA%B3%A0%EA%B0%80_%ED%86%B5%EB%A1%9C_%EB%B6%95%EA%B4%B4_%EC%82%AC%EA%B3%A0"
+        },
+        "ptwiki": {
+            "site": "ptwiki",
+            "title": "Colapso da passarela do Hyatt Regency",
+            "badges": [],
+            "url": "https://pt.wikipedia.org/wiki/Colapso_da_passarela_do_Hyatt_Regency"
+        },
+        "ruwiki": {
+            "site": "ruwiki",
+            "title": "\u041e\u0431\u0440\u0443\u0448\u0435\u043d\u0438\u0435 \u043f\u043e\u0434\u0432\u0435\u0441\u043d\u044b\u0445 \u0433\u0430\u043b\u0435\u0440\u0435\u0439 \u0432 \u043e\u0442\u0435\u043b\u0435 Hyatt Regency",
+            "badges": [
+                "Q17559452"
+            ],
+            "url": "https://ru.wikipedia.org/wiki/%D0%9E%D0%B1%D1%80%D1%83%D1%88%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BF%D0%BE%D0%B4%D0%B2%D0%B5%D1%81%D0%BD%D1%8B%D1%85_%D0%B3%D0%B0%D0%BB%D0%B5%D1%80%D0%B5%D0%B9_%D0%B2_%D0%BE%D1%82%D0%B5%D0%BB%D0%B5_Hyatt_Regency"
+        },
+        "viwiki": {
+            "site": "viwiki",
+            "title": "V\u1ee5 s\u1eadp \u0111\u01b0\u1eddng \u0111i b\u1ed9 Hyatt Regency",
+            "badges": [],
+            "url": "https://vi.wikipedia.org/wiki/V%E1%BB%A5_s%E1%BA%ADp_%C4%91%C6%B0%E1%BB%9Dng_%C4%91i_b%E1%BB%99_Hyatt_Regency"
+        },
+        "zhwiki": {
+            "site": "zhwiki",
+            "title": "\u582a\u85a9\u65af\u57ce\u51f1\u6085\u9152\u5e97\u5929\u6a4b\u574d\u584c\u4e8b\u6545",
+            "badges": [],
+            "url": "https://zh.wikipedia.org/wiki/%E5%A0%AA%E8%96%A9%E6%96%AF%E5%9F%8E%E5%87%B1%E6%82%85%E9%85%92%E5%BA%97%E5%A4%A9%E6%A9%8B%E5%9D%8D%E5%A1%8C%E4%BA%8B%E6%95%85"
+        }
+    }
+},

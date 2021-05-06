@@ -1,0 +1,2366 @@
+{
+    "entities": {
+        "Q691283": {
+            "pageid": 651252,
+            "ns": 0,
+            "title": "Q691283",
+            "lastrevid": 1405549788,
+            "modified": "2021-04-20T22:15:53Z",
+            "type": "item",
+            "id": "Q691283",
+            "labels": {
+                "la": {
+                    "language": "la",
+                    "value": "Collegium Iohannis"
+                },
+                "ar": {
+                    "language": "ar",
+                    "value": "\u0643\u0644\u064a\u0629 \u0633\u0627\u0646\u062a \u062c\u0648\u0646\u0632"
+                },
+                "cs": {
+                    "language": "cs",
+                    "value": "St John\u2019s College"
+                },
+                "cy": {
+                    "language": "cy",
+                    "value": "Coleg Sant Ioan, Caergrawnt"
+                },
+                "de": {
+                    "language": "de",
+                    "value": "St John\u2019s College"
+                },
+                "en": {
+                    "language": "en",
+                    "value": "St John's College"
+                },
+                "es": {
+                    "language": "es",
+                    "value": "Saint John's College (Cambridge)"
+                },
+                "fi": {
+                    "language": "fi",
+                    "value": "St John\u2019s College"
+                },
+                "fr": {
+                    "language": "fr",
+                    "value": "St John's College"
+                },
+                "it": {
+                    "language": "it",
+                    "value": "St John's College"
+                },
+                "pt": {
+                    "language": "pt",
+                    "value": "St John's College"
+                },
+                "ur": {
+                    "language": "ur",
+                    "value": "\u0633\u06cc\u0646\u0679 \u062c\u0627\u0646\u0632 \u06a9\u0627\u0644\u062c"
+                },
+                "zh": {
+                    "language": "zh",
+                    "value": "\u5251\u6865\u5927\u5b66\u5723\u7ea6\u7ff0\u5b66\u9662"
+                },
+                "de-ch": {
+                    "language": "de-ch",
+                    "value": "St John\u2019s College"
+                },
+                "en-ca": {
+                    "language": "en-ca",
+                    "value": "St John's College, Cambridge"
+                },
+                "en-gb": {
+                    "language": "en-gb",
+                    "value": "St John's College"
+                },
+                "nl": {
+                    "language": "nl",
+                    "value": "St John's College"
+                },
+                "nb": {
+                    "language": "nb",
+                    "value": "St John's College"
+                },
+                "pnb": {
+                    "language": "pnb",
+                    "value": "\u0633\u06cc\u0646\u0679 \u062c\u0627\u0646 \u06a9\u0627\u0644\u062c\u060c \u06a9\u06cc\u0645\u0628\u0631\u062c"
+                },
+                "pt-br": {
+                    "language": "pt-br",
+                    "value": "St John's College"
+                },
+                "el": {
+                    "language": "el",
+                    "value": "\u039a\u03bf\u03bb\u03bb\u03ad\u03b3\u03b9\u03bf \u03a3\u03b5\u03bd \u03a4\u03b6\u03c9\u03bd"
+                },
+                "mk": {
+                    "language": "mk",
+                    "value": "\u043a\u043e\u043b\u0435\u045f \u201e\u0421\u0435\u043d\u0442 \u040f\u043e\u043d\u0441\u201c"
+                },
+                "ru": {
+                    "language": "ru",
+                    "value": "\u043a\u043e\u043b\u043b\u0435\u0434\u0436 \u0421\u0432\u044f\u0442\u043e\u0433\u043e \u0418\u043e\u0430\u043d\u043d\u0430"
+                },
+                "be": {
+                    "language": "be",
+                    "value": "\u043a\u0430\u043b\u0435\u0434\u0436 \u0421\u0432\u044f\u0442\u043e\u0433\u0430 \u0414\u0436\u043e\u043d\u0430"
+                },
+                "hy": {
+                    "language": "hy",
+                    "value": "\u054d\u0578\u0582\u0580\u0562 \u054b\u0578\u0576\u056b \u0584\u0578\u056c\u0565\u057b"
+                },
+                "te": {
+                    "language": "te",
+                    "value": "\u0c38\u0c46\u0c2f\u0c3f\u0c02\u0c1f\u0c4d \u0c1c\u0c3e\u0c28\u0c4d\u0c38\u0c4d \u0c15\u0c33\u0c3e\u0c36\u0c3e\u0c32"
+                },
+                "bn": {
+                    "language": "bn",
+                    "value": "\u09b8\u09c7\u09a8\u09cd\u099f \u099c\u09a8\u09b8 \u0995\u09b2\u09c7\u099c, \u0995\u09c7\u09ae\u09ac\u09cd\u09b0\u09bf\u099c"
+                },
+                "ja": {
+                    "language": "ja",
+                    "value": "\u30bb\u30f3\u30c8\u30fb\u30b8\u30e7\u30f3\u30ba\u30fb\u30ab\u30ec\u30c3\u30b8 (\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\u5927\u5b66)"
+                },
+                "sv": {
+                    "language": "sv",
+                    "value": "St John's College"
+                },
+                "uk": {
+                    "language": "uk",
+                    "value": "\u043a\u043e\u043b\u0435\u0434\u0436 \u0421\u0432\u044f\u0442\u043e\u0433\u043e \u0414\u0436\u043e\u043d\u0430"
+                },
+                "ka": {
+                    "language": "ka",
+                    "value": "\u10e1\u10d4\u10dc\u10e2-\u10ef\u10dd\u10dc\u10d8\u10e1 \u10d9\u10dd\u10da\u10d4\u10ef\u10d8"
+                },
+                "da": {
+                    "language": "da",
+                    "value": "St John's College"
+                },
+                "eo": {
+                    "language": "eo",
+                    "value": "St John's College"
+                },
+                "ko": {
+                    "language": "ko",
+                    "value": "\uc138\uc778\ud2b8\uc874\uc2a4 \uce7c\ub9ac\uc9c0"
+                },
+                "tt": {
+                    "language": "tt",
+                    "value": "\u0418\u0437\u0433\u0435 \u0496\u043e\u043d \u043a\u04e9\u043b\u043b\u0438\u044f\u0442\u0435"
+                },
+                "gd": {
+                    "language": "gd",
+                    "value": "Colaiste Naomh E\u00f2in"
+                },
+                "he": {
+                    "language": "he",
+                    "value": "\u05e7\u05d5\u05dc\u05d2' \u05e1\u05e0\u05d8 \u05d2'\u05d5\u05df"
+                },
+                "lb": {
+                    "language": "lb",
+                    "value": "St John's College"
+                },
+                "pl": {
+                    "language": "pl",
+                    "value": "St John's College"
+                },
+                "azb": {
+                    "language": "azb",
+                    "value": "\u0633\u0646\u062a \u062c\u0627\u0646\u060c \u06a9\u0645\u0628\u0631\u06cc\u062c \u06a9\u0627\u0644\u062c\u06cc"
+                },
+                "id": {
+                    "language": "id",
+                    "value": "St John's College, Cambridge"
+                },
+                "ca": {
+                    "language": "ca",
+                    "value": "St John's College, Cambridge"
+                },
+                "ml": {
+                    "language": "ml",
+                    "value": "\u0d38\u0d46\u0d28\u0d4d\u0d31\u0d4d \u0d1c\u0d4b\u0d7a\u0d38\u0d4d \u0d15\u0d4b\u0d33\u0d47\u0d1c\u0d4d"
+                },
+                "lv": {
+                    "language": "lv",
+                    "value": "Sentd\u017eonsa koled\u017ea"
+                },
+                "tr": {
+                    "language": "tr",
+                    "value": "St John's Koleji"
+                },
+                "be-tarask": {
+                    "language": "be-tarask",
+                    "value": "\u043a\u043e\u043b\u0435\u0434\u0436 \u0441\u044c\u0432\u044f\u0442\u043e\u0433\u0430 \u042f\u043d\u0430"
+                },
+                "ga": {
+                    "language": "ga",
+                    "value": "Ollscoil Naomh Eoin"
+                },
+                "hr": {
+                    "language": "hr",
+                    "value": "St John\u2019s College"
+                },
+                "sk": {
+                    "language": "sk",
+                    "value": "St John\u2019s College"
+                }
+            },
+            "descriptions": {
+                "en": {
+                    "language": "en",
+                    "value": "Constituent college of the University of Cambridge"
+                },
+                "it": {
+                    "language": "it",
+                    "value": "collegio dell'Universit\u00e0 di Cambridge"
+                },
+                "ru": {
+                    "language": "ru",
+                    "value": "\u043a\u043e\u043b\u043b\u0435\u0434\u0436 \u041a\u0435\u043c\u0431\u0440\u0438\u0434\u0436\u0441\u043a\u043e\u0433\u043e \u0443\u043d\u0438\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0430"
+                },
+                "es": {
+                    "language": "es",
+                    "value": "\"college\" de la Universidad de Cambridge"
+                },
+                "fr": {
+                    "language": "fr",
+                    "value": "coll\u00e8ge de l'universit\u00e9 de Cambridge"
+                },
+                "en-gb": {
+                    "language": "en-gb",
+                    "value": "college of the University of Cambridge"
+                },
+                "nl": {
+                    "language": "nl",
+                    "value": "college van de Universiteit van Cambridge in Cambridge, Verenigd Koninkrijk"
+                },
+                "uk": {
+                    "language": "uk",
+                    "value": "\u043a\u043e\u043b\u0435\u0434\u0436 \u041a\u0435\u043c\u0431\u0440\u0438\u0434\u0436\u0441\u044c\u043a\u043e\u0433\u043e \u0443\u043d\u0456\u0432\u0435\u0440\u0441\u0438\u0442\u0435\u0442\u0443"
+                },
+                "eo": {
+                    "language": "eo",
+                    "value": "kolegio de la universitato de Kembri\u011do"
+                },
+                "ko": {
+                    "language": "ko",
+                    "value": "\ucf00\uc784\ube0c\ub9ac\uc9c0 \ub300\ud559\uad50\uc758 \ub2e8\uacfc\ub300\ud559(\uce7c\ub9ac\uc9c0)"
+                },
+                "el": {
+                    "language": "el",
+                    "value": "\u039a\u03bf\u03bb\u03bb\u03ad\u03b3\u03b9\u03bf \u03c4\u03bf\u03c5 \u03a0\u03b1\u03bd\u03b5\u03c0\u03b9\u03c3\u03c4\u03b7\u03bc\u03af\u03bf\u03c5 \u03c4\u03bf\u03c5 \u039a\u03ad\u03b9\u03bc\u03c0\u03c1\u03b9\u03c4\u03b6"
+                },
+                "cs": {
+                    "language": "cs",
+                    "value": "jedna z kolej\u00ed univerzity v Cambridge"
+                },
+                "pl": {
+                    "language": "pl",
+                    "value": "jedno z kolegi\u00f3w wchodz\u0105cych w sk\u0142ad Uniwersytetu Cambridge"
+                },
+                "ca": {
+                    "language": "ca",
+                    "value": "college de la Universitat de Cambridge"
+                },
+                "ml": {
+                    "language": "ml",
+                    "value": "\u0d15\u0d47\u0d02\u0d2c\u0d4d\u0d30\u0d3f\u0d21\u0d4d\u0d1c\u0d4d \u0d38\u0d7c\u0d35\u0d15\u0d32\u0d3e\u0d36\u0d3e\u0d32\u0d2f\u0d3f\u0d32\u0d46 \u0d12\u0d30\u0d41 \u0d15\u0d4b\u0d33\u0d47\u0d1c\u0d4d"
+                },
+                "nb": {
+                    "language": "nb",
+                    "value": "University of Cambridge"
+                },
+                "lv": {
+                    "language": "lv",
+                    "value": "Kembrid\u017eas Universit\u0101tes koled\u017ea"
+                },
+                "tr": {
+                    "language": "tr",
+                    "value": "Cambridge \u00dcniversitesi'nin koleji"
+                },
+                "be-tarask": {
+                    "language": "be-tarask",
+                    "value": "\u0430\u0434\u0437\u0456\u043d \u0437 \u043a\u043e\u043b\u0435\u0434\u0436\u0430\u045e \u041a\u0435\u043c\u0431\u0440\u044b\u0434\u0437\u043a\u0430\u0433\u0430 \u045e\u043d\u0456\u0432\u044d\u0440\u0441\u044b\u0442\u044d\u0442\u0443"
+                }
+            },
+            "aliases": {
+                "en": [
+                    {
+                        "language": "en",
+                        "value": "The Master, Fellows and Scholars of the College of St John the Evangelist in the University of Cambridge"
+                    },
+                    {
+                        "language": "en",
+                        "value": "St. John's College, Cambridge"
+                    },
+                    {
+                        "language": "en",
+                        "value": "St Johns College"
+                    },
+                    {
+                        "language": "en",
+                        "value": "St John's College, Cambridge"
+                    },
+                    {
+                        "language": "en",
+                        "value": "St John's College, University of Cambridge"
+                    }
+                ],
+                "ru": [
+                    {
+                        "language": "ru",
+                        "value": "\u0421\u0435\u043d\u0442-\u0414\u0436\u043e\u043d\u0441 \u043a\u043e\u043b\u043b\u0435\u0434\u0436"
+                    }
+                ],
+                "be": [
+                    {
+                        "language": "be",
+                        "value": "\u0421\u0435\u043d\u0442-\u0414\u0436\u043e\u043d\u0441 \u043a\u0430\u043b\u0435\u0434\u0436"
+                    }
+                ],
+                "ja": [
+                    {
+                        "language": "ja",
+                        "value": "\u30bb\u30f3\u30c8\u30b8\u30e7\u30f3\u30fb\u30ab\u30ec\u30c3\u30b8 (\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\u5927\u5b66)"
+                    },
+                    {
+                        "language": "ja",
+                        "value": "\u30bb\u30f3\u30c8\u30fb\u30b8\u30e7\u30f3\u30fb\u30ab\u30ec\u30c3\u30b8 (\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\u5927\u5b66)"
+                    },
+                    {
+                        "language": "ja",
+                        "value": "\u30bb\u30f3\u30c8\u30b8\u30e7\u30f3\u30fb\u30ab\u30ec\u30c3\u30b8"
+                    },
+                    {
+                        "language": "ja",
+                        "value": "\u8056\u30b8\u30e7\u30f3\u30fb\u30ab\u30ec\u30c3\u30b8 (\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\u5927\u5b66)"
+                    },
+                    {
+                        "language": "ja",
+                        "value": "\u30bb\u30f3\u30c8\u30fb\u30b8\u30e7\u30f3\u30ba\u30fb\u30ab\u30ec\u30c3\u30b8 (\u30aa\u30c3\u30af\u30b9\u30d5\u30a9\u30fc\u30c9\u5927\u5b66)"
+                    }
+                ],
+                "uk": [
+                    {
+                        "language": "uk",
+                        "value": "\u043a\u043e\u043b\u0435\u0434\u0436 \u0421\u0435\u043d\u0442-\u0414\u0436\u043e\u043d\u0441"
+                    }
+                ],
+                "eo": [
+                    {
+                        "language": "eo",
+                        "value": "Kolegio Sankta Johano"
+                    }
+                ],
+                "ko": [
+                    {
+                        "language": "ko",
+                        "value": "\ucf00\uc784\ube0c\ub9ac\uc9c0 \ub300\ud559\uad50 \uc138\uc778\ud2b8\uc874\uc2a4 \uce7c\ub9ac\uc9c0"
+                    },
+                    {
+                        "language": "ko",
+                        "value": "\ucea0\ube0c\ub9bf\uc9c0 \ub300\ud559\uad50 \uc138\uc778\ud2b8\uc874\uc2a4 \uce7c\ub9ac\uc9c0"
+                    },
+                    {
+                        "language": "ko",
+                        "value": "\uc138\uc778\ud2b8 \uc874\uc2a4 \uce7c\ub9ac\uc9c0"
+                    },
+                    {
+                        "language": "ko",
+                        "value": "\ucea0\ube0c\ub9ac\uc9c0\uc138\uc778\ud2b8\uc874\uc2a4\ub300\ud559"
+                    },
+                    {
+                        "language": "ko",
+                        "value": "\ucea0\ube0c\ub9ac\uc9c0 \ub300\ud559\uad50 \uc138\uc778\ud2b8\uc874\uc2a4 \uce7c\ub9ac\uc9c0"
+                    },
+                    {
+                        "language": "ko",
+                        "value": "\ucea0\ube0c\ub9ac\uc9c0 \uc138\uc778\ud2b8\uc874\uc2a4 \ub300\ud559"
+                    }
+                ],
+                "lv": [
+                    {
+                        "language": "lv",
+                        "value": "St John's College"
+                    }
+                ],
+                "fr": [
+                    {
+                        "language": "fr",
+                        "value": "St John\u2018s College (Cambridge)"
+                    },
+                    {
+                        "language": "fr",
+                        "value": "Saint John\u2018s College (Cambridge)"
+                    }
+                ]
+            },
+            "claims": {
+                "P31": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P31",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 1055028,
+                                    "id": "Q1055028"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "q691283$0126aa0c-4310-1379-393b-94de9bedb508",
+                        "rank": "normal"
+                    },
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P31",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 19844914,
+                                    "id": "Q19844914"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$2CCE745D-8253-4348-BF4E-AC2DAA042A44",
+                        "rank": "normal"
+                    }
+                ],
+                "P373": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P373",
+                            "datavalue": {
+                                "value": "St John's College, Cambridge",
+                                "type": "string"
+                            },
+                            "datatype": "string"
+                        },
+                        "type": "statement",
+                        "id": "q691283$8FC745D1-75FE-4218-AD72-1761DEA06261",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+                                "snaks": {
+                                    "P143": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P143",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 328,
+                                                    "id": "Q328"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P143"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P625": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P625",
+                            "datavalue": {
+                                "value": {
+                                    "latitude": 52.208055555556,
+                                    "longitude": 0.11666666666667,
+                                    "altitude": null,
+                                    "precision": null,
+                                    "globe": "http://www.wikidata.org/entity/Q2"
+                                },
+                                "type": "globecoordinate"
+                            },
+                            "datatype": "globe-coordinate"
+                        },
+                        "type": "statement",
+                        "id": "q691283$BBAC2599-5BFF-4BBC-B296-637F47811B85",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "fa278ebfc458360e5aed63d5058cca83c46134f1",
+                                "snaks": {
+                                    "P143": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P143",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 328,
+                                                    "id": "Q328"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P143"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P112": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P112",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 229202,
+                                    "id": "Q229202"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "q691283$33ff41d0-438c-913a-fa5d-a5aa2279e512",
+                        "rank": "normal"
+                    }
+                ],
+                "P17": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P17",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 145,
+                                    "id": "Q145"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "q691283$07c4c8da-4fca-90a2-99d9-701b535e6431",
+                        "rank": "normal"
+                    }
+                ],
+                "P910": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P910",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 8809699,
+                                    "id": "Q8809699"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$28DF1702-7EC5-4BA9-838D-9A20AD7F8188",
+                        "rank": "normal"
+                    }
+                ],
+                "P646": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P646",
+                            "datavalue": {
+                                "value": "/m/0d07s",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$E41BFA53-E82D-4E21-BD40-BA80C5293DAF",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "2b00cb481cddcac7623114367489b5c194901c4a",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 15241312,
+                                                    "id": "Q15241312"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P577": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P577",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2013-10-28T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P577"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P138": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P138",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 328804,
+                                    "id": "Q328804"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$8d9e0101-4129-d21f-5b84-6cfb3412315d",
+                        "rank": "normal"
+                    }
+                ],
+                "P94": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P94",
+                            "datavalue": {
+                                "value": "Johns shield.png",
+                                "type": "string"
+                            },
+                            "datatype": "commonsMedia"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$28F213F9-836B-45C1-BF60-22438CC33548",
+                        "rank": "normal"
+                    }
+                ],
+                "P18": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P18",
+                            "datavalue": {
+                                "value": "St. John\u2019s College.jpg",
+                                "type": "string"
+                            },
+                            "datatype": "commonsMedia"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$AC154D20-2EBE-47D9-9884-446400163F28",
+                        "rank": "normal"
+                    },
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P18",
+                            "datavalue": {
+                                "value": "St Johns New Court.jpg",
+                                "type": "string"
+                            },
+                            "datatype": "commonsMedia"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$017710A5-0D2D-4F4F-8896-E0B224944FC2",
+                        "rank": "normal"
+                    }
+                ],
+                "P1004": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P1004",
+                            "datavalue": {
+                                "value": "18bc7891-acb5-49ec-900c-729a31062dcc",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$540533AF-9894-4F4F-BA49-5F7348B56748",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "5910b488f96064ef7da253c52cc03fab3f1e0eec",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 14005,
+                                                    "id": "Q14005"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2018-12-27T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P813"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P1216": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P1216",
+                            "datavalue": {
+                                "value": "1125491",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$C8E894BE-8FDB-4E5F-9562-656B6689C885",
+                        "rank": "normal"
+                    }
+                ],
+                "P1612": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P1612",
+                            "datavalue": {
+                                "value": "St John's College, Cambridge",
+                                "type": "string"
+                            },
+                            "datatype": "string"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$9244DB05-CD2B-497C-9312-8C818A12433C",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "e71a7903858496c67eea189a7084d5559f788edb",
+                                "snaks": {
+                                    "P143": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P143",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 565,
+                                                    "id": "Q565"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P143"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P1435": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P1435",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 15700818,
+                                    "id": "Q15700818"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "qualifiers": {
+                            "P580": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P580",
+                                    "hash": "72c5983468e1134a87a2e9334e817bcf37132aea",
+                                    "datavalue": {
+                                        "value": {
+                                            "time": "+1972-11-02T00:00:00Z",
+                                            "timezone": 0,
+                                            "before": 0,
+                                            "after": 0,
+                                            "precision": 11,
+                                            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                        },
+                                        "type": "time"
+                                    },
+                                    "datatype": "time"
+                                }
+                            ]
+                        },
+                        "qualifiers-order": [
+                            "P580"
+                        ],
+                        "id": "Q691283$4D7075F7-E884-41C5-9BD5-4E6783AE550A",
+                        "rank": "normal"
+                    }
+                ],
+                "P571": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P571",
+                            "datavalue": {
+                                "value": {
+                                    "time": "+1511-00-00T00:00:00Z",
+                                    "timezone": 0,
+                                    "before": 0,
+                                    "after": 0,
+                                    "precision": 9,
+                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985786"
+                                },
+                                "type": "time"
+                            },
+                            "datatype": "time"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$3c35725f-42f6-4793-0033-1b9b3ea8e3c8",
+                        "rank": "normal"
+                    }
+                ],
+                "P856": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P856",
+                            "datavalue": {
+                                "value": "http://www.joh.cam.ac.uk/",
+                                "type": "string"
+                            },
+                            "datatype": "url"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$b91f1820-450a-4567-1274-b8f01c3342cb",
+                        "rank": "normal"
+                    }
+                ],
+                "P214": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P214",
+                            "datavalue": {
+                                "value": "138286025",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$95B4E625-58FA-4350-98C6-DAC4C71900FC",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "9b43a00c0898a90b5902965a797f48ca3014fe2f",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 54919,
+                                                    "id": "Q54919"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2015-08-05T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P813"
+                                ]
+                            },
+                            {
+                                "hash": "d22b1779e8ce82a51a5a0459c72d279fa3c4eff9",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 62338567,
+                                                    "id": "Q62338567"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P6698": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P6698",
+                                            "datavalue": {
+                                                "value": "\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\u5927\u5b66\u30bb\u30f3\u30c8\u30fb\u30b8\u30e7\u30f3\u30ba\u30fb\u30ab\u30ec\u30c3\u30b8",
+                                                "type": "string"
+                                            },
+                                            "datatype": "external-id"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2020-03-21T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P6698",
+                                    "P813"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P1602": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P1602",
+                            "datavalue": {
+                                "value": "st-johns-college-university-of-cambridge-5934",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "qualifiers": {
+                            "P1810": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P1810",
+                                    "hash": "4073242c81361e18fde308d5093e368f21f3429d",
+                                    "datavalue": {
+                                        "value": "St John's College, University of Cambridge",
+                                        "type": "string"
+                                    },
+                                    "datatype": "string"
+                                }
+                            ]
+                        },
+                        "qualifiers-order": [
+                            "P1810"
+                        ],
+                        "id": "Q691283$58599C0C-F478-4DA3-9E83-E295B5060E9C",
+                        "rank": "normal"
+                    }
+                ],
+                "P3417": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P3417",
+                            "datavalue": {
+                                "value": "St-Johns-College-4",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$02788A0E-55D5-4193-BFBD-856DA2F7FBB0",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "3b0a5bb3c1f955edce73740124f7d935698092ad",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 51711,
+                                                    "id": "Q51711"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P213": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P213",
+                            "datavalue": {
+                                "value": "0000 0004 0632 3855",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$17BE6265-BF25-46DC-9CD2-6D3B73B1C39A",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "fe30c3d8276dce76f79eeb1b32fe76c537a259fa",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 28527677,
+                                                    "id": "Q28527677"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P3500": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P3500",
+                            "datavalue": {
+                                "value": "61460",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$DBACAD6C-5DFB-474D-918A-61821DC30CB9",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "45e8fa2e37c421b7e5970029041dbdeac9824284",
+                                "snaks": {
+                                    "P356": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P356",
+                                            "datavalue": {
+                                                "value": "10.5281/ZENODO.758080",
+                                                "type": "string"
+                                            },
+                                            "datatype": "external-id"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P356"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P3876": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P3876",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 8237197,
+                                    "id": "Q8237197"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$9AC906E8-199B-41AE-8635-6DBDC0814718",
+                        "rank": "normal"
+                    }
+                ],
+                "P131": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P131",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 21713103,
+                                    "id": "Q21713103"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$917C853D-24EE-4B02-B1E0-B7B771540036",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "6459c15869c75b5334118a5ef364ea45885f83a0",
+                                "snaks": {
+                                    "P143": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P143",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 19604421,
+                                                    "id": "Q19604421"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P143"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P227": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P227",
+                            "datavalue": {
+                                "value": "18387-8",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$9DF75EC1-CEBD-46EB-AE2A-72C2D986F153",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "9a24f7c0208b05d6be97077d855671d1dfdbc0dd",
+                                "snaks": {
+                                    "P143": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P143",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 48183,
+                                                    "id": "Q48183"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P143"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P4672": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P4672",
+                            "datavalue": {
+                                "value": "03fcf861-1178-4bce-a74d-a60fb220b388",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$1C58F1CC-BCE1-492C-BCEE-72A41A6A4428",
+                        "rank": "normal"
+                    }
+                ],
+                "P154": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P154",
+                            "datavalue": {
+                                "value": "Johns shield.png",
+                                "type": "string"
+                            },
+                            "datatype": "commonsMedia"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$8069E81F-49AF-4238-B1D6-9DD3ED1AFC3D",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "1143f54706b26b018f4a8fb5e02a9f8706d1789a",
+                                "snaks": {
+                                    "P143": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P143",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 8447,
+                                                    "id": "Q8447"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P4656": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P4656",
+                                            "datavalue": {
+                                                "value": "https://fr.wikipedia.org/w/index.php?title=St_John's_College_(Cambridge)&oldid=149677171",
+                                                "type": "string"
+                                            },
+                                            "datatype": "url"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P143",
+                                    "P4656"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P268": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P268",
+                            "datavalue": {
+                                "value": "166300506",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$9B8707DC-E959-4E6E-A9C3-A253002C28EB",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "cd2dfce98ec68ea0779c71a09a371591a4417e73",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 54919,
+                                                    "id": "Q54919"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P214": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P214",
+                                            "datavalue": {
+                                                "value": "232641350",
+                                                "type": "string"
+                                            },
+                                            "datatype": "external-id"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2018-08-11T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P214",
+                                    "P813"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P269": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P269",
+                            "datavalue": {
+                                "value": "165736968",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$2B3BF236-274F-40F5-BB47-F1E5E5E771EB",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "cd2dfce98ec68ea0779c71a09a371591a4417e73",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 54919,
+                                                    "id": "Q54919"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P214": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P214",
+                                            "datavalue": {
+                                                "value": "232641350",
+                                                "type": "string"
+                                            },
+                                            "datatype": "external-id"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2018-08-11T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P214",
+                                    "P813"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P1417": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P1417",
+                            "datavalue": {
+                                "value": "topic/Saint-Johns-College-University-of-Cambridge-England",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$8BEDBAEC-A51C-4A77-A481-7A15D39CA6D2",
+                        "rank": "normal"
+                    }
+                ],
+                "P361": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P361",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 35794,
+                                    "id": "Q35794"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$7B0048B8-BDD2-4485-B0B3-A0C9BAAD806F",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "548b766544114057d43af21ec02bcfe5000f77a3",
+                                "snaks": {
+                                    "P143": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P143",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 1551807,
+                                                    "id": "Q1551807"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P4656": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P4656",
+                                            "datavalue": {
+                                                "value": "https://pl.wikipedia.org/w/index.php?title=St_John\u2019s_College_(Cambridge)&oldid=54162645",
+                                                "type": "string"
+                                            },
+                                            "datatype": "url"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P143",
+                                    "P4656"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P5775": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P5775",
+                            "datavalue": {
+                                "value": "St John's College Old Library interior.jpg",
+                                "type": "string"
+                            },
+                            "datatype": "commonsMedia"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$76aa32eb-4e64-c578-0bfb-fbd4403b87e8",
+                        "rank": "normal"
+                    }
+                ],
+                "P244": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P244",
+                            "datavalue": {
+                                "value": "no2012041776",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$C2A27F1C-098E-4676-8D66-1DF6062C112A",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "14fa5898ac764e0660517aa07ea0bbba505f262b",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 54919,
+                                                    "id": "Q54919"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2019-03-06T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P813"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P7859": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P7859",
+                            "datavalue": {
+                                "value": "lccn-no2012041776",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$FA16E7C6-9748-4897-B739-5BB87A7BC9E6",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "c8bfcec89a297a66dc53a98fbddfe3c4cdc8fc51",
+                                "snaks": {
+                                    "P214": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P214",
+                                            "datavalue": {
+                                                "value": "232641350",
+                                                "type": "string"
+                                            },
+                                            "datatype": "external-id"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P214"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P1889": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P1889",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 609646,
+                                    "id": "Q609646"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$49138E0D-A2BF-43CF-BF2F-8559B9FA0071",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "e95cf18e6262a3a11b7d329ee72699015b0ea02e",
+                                "snaks": {
+                                    "P143": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P143",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 8447,
+                                                    "id": "Q8447"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P4656": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P4656",
+                                            "datavalue": {
+                                                "value": "https://fr.wikipedia.org/w/index.php?title=St_John's_College_(Cambridge)&oldid=169334993",
+                                                "type": "string"
+                                            },
+                                            "datatype": "url"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P143",
+                                    "P4656"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P7959": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P7959",
+                            "datavalue": {
+                                "value": {
+                                    "entity-type": "item",
+                                    "numeric-id": 30612390,
+                                    "id": "Q30612390"
+                                },
+                                "type": "wikibase-entityid"
+                            },
+                            "datatype": "wikibase-item"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$96b31c9c-2e43-4765-943c-09b1d8ba836f",
+                        "rank": "normal"
+                    }
+                ],
+                "P8167": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P8167",
+                            "datavalue": {
+                                "value": "st_johns_college_cambridge",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "qualifiers": {
+                            "P1810": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P1810",
+                                    "hash": "cf0a367ccd07e85b6e8c8ccf17d556d609f9ce20",
+                                    "datavalue": {
+                                        "value": "St John's College, Cambridge",
+                                        "type": "string"
+                                    },
+                                    "datatype": "string"
+                                }
+                            ]
+                        },
+                        "qualifiers-order": [
+                            "P1810"
+                        ],
+                        "id": "Q691283$FEDFD9D1-DF88-4CA4-9BA7-45DF3798070D",
+                        "rank": "normal"
+                    }
+                ],
+                "P2002": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P2002",
+                            "datavalue": {
+                                "value": "stjohnscam",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "qualifiers": {
+                            "P6552": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P6552",
+                                    "hash": "1fe344317752bd9ea79ae281edecbc67f670fdf8",
+                                    "datavalue": {
+                                        "value": "460061959",
+                                        "type": "string"
+                                    },
+                                    "datatype": "external-id"
+                                }
+                            ],
+                            "P580": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P580",
+                                    "hash": "1a15a7512665f96cfb0f7663ce340e5121bb899d",
+                                    "datavalue": {
+                                        "value": {
+                                            "time": "+2012-01-10T00:00:00Z",
+                                            "timezone": 0,
+                                            "before": 0,
+                                            "after": 0,
+                                            "precision": 11,
+                                            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                        },
+                                        "type": "time"
+                                    },
+                                    "datatype": "time"
+                                }
+                            ],
+                            "P585": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P585",
+                                    "hash": "e7f1d7fe611e13a2746955584016b6139bd8464f",
+                                    "datavalue": {
+                                        "value": {
+                                            "time": "+2020-12-24T00:00:00Z",
+                                            "timezone": 0,
+                                            "before": 0,
+                                            "after": 0,
+                                            "precision": 11,
+                                            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                        },
+                                        "type": "time"
+                                    },
+                                    "datatype": "time"
+                                }
+                            ]
+                        },
+                        "qualifiers-order": [
+                            "P6552",
+                            "P580",
+                            "P585"
+                        ],
+                        "id": "Q691283$6E72DB16-A638-49E8-872D-D0BC10F84BFB",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "e07e7644ac5bb8da0ec2b46a9272af67d3330479",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 648625,
+                                                    "id": "Q648625"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2020-10-19T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P813"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P2003": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P2003",
+                            "datavalue": {
+                                "value": "stjohnscam",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$C4C0F006-6061-4967-8769-9DDEB9CC9BE6",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "e07e7644ac5bb8da0ec2b46a9272af67d3330479",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 648625,
+                                                    "id": "Q648625"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2020-10-19T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P813"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P2013": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P2013",
+                            "datavalue": {
+                                "value": "stjohnscambridge",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$E327B0FD-0DA4-41EF-B715-6B6E080C3AAE",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "e07e7644ac5bb8da0ec2b46a9272af67d3330479",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 648625,
+                                                    "id": "Q648625"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2020-10-19T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P813"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P613": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P613",
+                            "datavalue": {
+                                "value": "TL4442058647",
+                                "type": "string"
+                            },
+                            "datatype": "string"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$A05DD7F2-F787-4504-BC62-669FD44A4435",
+                        "rank": "normal",
+                        "references": [
+                            {
+                                "hash": "1169ff78acdaa4f62749f3071a21caaed64ef5a3",
+                                "snaks": {
+                                    "P248": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P248",
+                                            "datavalue": {
+                                                "value": {
+                                                    "entity-type": "item",
+                                                    "numeric-id": 6973052,
+                                                    "id": "Q6973052"
+                                                },
+                                                "type": "wikibase-entityid"
+                                            },
+                                            "datatype": "wikibase-item"
+                                        }
+                                    ],
+                                    "P1216": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P1216",
+                                            "datavalue": {
+                                                "value": "1125491",
+                                                "type": "string"
+                                            },
+                                            "datatype": "external-id"
+                                        }
+                                    ],
+                                    "P813": [
+                                        {
+                                            "snaktype": "value",
+                                            "property": "P813",
+                                            "datavalue": {
+                                                "value": {
+                                                    "time": "+2020-12-27T00:00:00Z",
+                                                    "timezone": 0,
+                                                    "before": 0,
+                                                    "after": 0,
+                                                    "precision": 11,
+                                                    "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                                },
+                                                "type": "time"
+                                            },
+                                            "datatype": "time"
+                                        }
+                                    ]
+                                },
+                                "snaks-order": [
+                                    "P248",
+                                    "P1216",
+                                    "P813"
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "P4527": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P4527",
+                            "datavalue": {
+                                "value": "68936",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "qualifiers": {
+                            "P1810": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P1810",
+                                    "hash": "3db69aada45138eb55bb15c06a85be540c38d8fe",
+                                    "datavalue": {
+                                        "value": "St John's College Cambridge",
+                                        "type": "string"
+                                    },
+                                    "datatype": "string"
+                                }
+                            ]
+                        },
+                        "qualifiers-order": [
+                            "P1810"
+                        ],
+                        "id": "Q691283$2206B8E7-6717-4111-A4B6-65514E846946",
+                        "rank": "normal"
+                    }
+                ],
+                "P8687": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P8687",
+                            "datavalue": {
+                                "value": {
+                                    "amount": "+8578",
+                                    "unit": "1"
+                                },
+                                "type": "quantity"
+                            },
+                            "datatype": "quantity"
+                        },
+                        "type": "statement",
+                        "qualifiers": {
+                            "P6552": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P6552",
+                                    "hash": "1fe344317752bd9ea79ae281edecbc67f670fdf8",
+                                    "datavalue": {
+                                        "value": "460061959",
+                                        "type": "string"
+                                    },
+                                    "datatype": "external-id"
+                                }
+                            ],
+                            "P585": [
+                                {
+                                    "snaktype": "value",
+                                    "property": "P585",
+                                    "hash": "ca6610e3015cabb3069ecb93a89c1f5245717b35",
+                                    "datavalue": {
+                                        "value": {
+                                            "time": "+2021-01-10T00:00:00Z",
+                                            "timezone": 0,
+                                            "before": 0,
+                                            "after": 0,
+                                            "precision": 11,
+                                            "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                                        },
+                                        "type": "time"
+                                    },
+                                    "datatype": "time"
+                                }
+                            ]
+                        },
+                        "qualifiers-order": [
+                            "P6552",
+                            "P585"
+                        ],
+                        "id": "Q691283$db72b8b4-d835-4ae1-a12f-0e85af85c7fb",
+                        "rank": "normal"
+                    }
+                ],
+                "P6698": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P6698",
+                            "datavalue": {
+                                "value": "\u30b1\u30f3\u30d6\u30ea\u30c3\u30b8\u5927\u5b66\u30bb\u30f3\u30c8\u30fb\u30b8\u30e7\u30f3\u30ba\u30fb\u30ab\u30ec\u30c3\u30b8",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$09B9F599-4820-4791-AC75-F7757BE665D6",
+                        "rank": "normal"
+                    }
+                ],
+                "P6683": [
+                    {
+                        "mainsnak": {
+                            "snaktype": "value",
+                            "property": "P6683",
+                            "datavalue": {
+                                "value": "179022",
+                                "type": "string"
+                            },
+                            "datatype": "external-id"
+                        },
+                        "type": "statement",
+                        "id": "Q691283$7EE95A8C-8E5E-4A80-ABF9-273398186CB0",
+                        "rank": "normal"
+                    }
+                ]
+            },
+            "sitelinks": {
+                "arwiki": {
+                    "site": "arwiki",
+                    "title": "\u0643\u0644\u064a\u0629 \u0633\u0627\u0646\u062a \u062c\u0648\u0646\u0632 (\u0643\u0627\u0645\u0628\u0631\u064a\u062f\u062c)",
+                    "badges": [],
+                    "url": "https://ar.wikipedia.org/wiki/%D9%83%D9%84%D9%8A%D8%A9_%D8%B3%D8%A7%D9%86%D8%AA_%D8%AC%D9%88%D9%86%D8%B2_(%D9%83%D8%A7%D9%85%D8%A8%D8%B1%D9%8A%D8%AF%D8%AC)"
+                },
+                "azbwiki": {
+                    "site": "azbwiki",
+                    "title": "\u0633\u0646\u062a \u062c\u0627\u0646\u060c \u06a9\u0645\u0628\u0631\u06cc\u062c \u06a9\u0627\u0644\u062c\u06cc",
+                    "badges": [],
+                    "url": "https://azb.wikipedia.org/wiki/%D8%B3%D9%86%D8%AA_%D8%AC%D8%A7%D9%86%D8%8C_%DA%A9%D9%85%D8%A8%D8%B1%DB%8C%D8%AC_%DA%A9%D8%A7%D9%84%D8%AC%DB%8C"
+                },
+                "bnwiki": {
+                    "site": "bnwiki",
+                    "title": "\u09b8\u09c7\u09a8\u09cd\u099f \u099c\u09a8\u09b8 \u0995\u09b2\u09c7\u099c, \u0995\u09c7\u09ae\u09ac\u09cd\u09b0\u09bf\u099c",
+                    "badges": [],
+                    "url": "https://bn.wikipedia.org/wiki/%E0%A6%B8%E0%A7%87%E0%A6%A8%E0%A7%8D%E0%A6%9F_%E0%A6%9C%E0%A6%A8%E0%A6%B8_%E0%A6%95%E0%A6%B2%E0%A7%87%E0%A6%9C,_%E0%A6%95%E0%A7%87%E0%A6%AE%E0%A6%AC%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%9C"
+                },
+                "cswiki": {
+                    "site": "cswiki",
+                    "title": "St John's College (Cambridge)",
+                    "badges": [],
+                    "url": "https://cs.wikipedia.org/wiki/St_John%27s_College_(Cambridge)"
+                },
+                "cywiki": {
+                    "site": "cywiki",
+                    "title": "Coleg Sant Ioan, Caergrawnt",
+                    "badges": [],
+                    "url": "https://cy.wikipedia.org/wiki/Coleg_Sant_Ioan,_Caergrawnt"
+                },
+                "dewiki": {
+                    "site": "dewiki",
+                    "title": "St John\u2019s College (Cambridge)",
+                    "badges": [],
+                    "url": "https://de.wikipedia.org/wiki/St_John%E2%80%99s_College_(Cambridge)"
+                },
+                "enwiki": {
+                    "site": "enwiki",
+                    "title": "St John's College, Cambridge",
+                    "badges": [],
+                    "url": "https://en.wikipedia.org/wiki/St_John%27s_College,_Cambridge"
+                },
+                "eowiki": {
+                    "site": "eowiki",
+                    "title": "St John's College (Kembri\u011do)",
+                    "badges": [],
+                    "url": "https://eo.wikipedia.org/wiki/St_John%27s_College_(Kembri%C4%9Do)"
+                },
+                "eswiki": {
+                    "site": "eswiki",
+                    "title": "Saint John's College (Cambridge)",
+                    "badges": [],
+                    "url": "https://es.wikipedia.org/wiki/Saint_John%27s_College_(Cambridge)"
+                },
+                "fiwiki": {
+                    "site": "fiwiki",
+                    "title": "St John\u2019s College (Cambridge)",
+                    "badges": [],
+                    "url": "https://fi.wikipedia.org/wiki/St_John%E2%80%99s_College_(Cambridge)"
+                },
+                "frwiki": {
+                    "site": "frwiki",
+                    "title": "St John's College (Cambridge)",
+                    "badges": [],
+                    "url": "https://fr.wikipedia.org/wiki/St_John%27s_College_(Cambridge)"
+                },
+                "idwiki": {
+                    "site": "idwiki",
+                    "title": "St John's College, Cambridge",
+                    "badges": [],
+                    "url": "https://id.wikipedia.org/wiki/St_John%27s_College,_Cambridge"
+                },
+                "itwiki": {
+                    "site": "itwiki",
+                    "title": "St John's College (Cambridge)",
+                    "badges": [],
+                    "url": "https://it.wikipedia.org/wiki/St_John%27s_College_(Cambridge)"
+                },
+                "lawiki": {
+                    "site": "lawiki",
+                    "title": "Collegium Iohannis (Cantabrigia)",
+                    "badges": [],
+                    "url": "https://la.wikipedia.org/wiki/Collegium_Iohannis_(Cantabrigia)"
+                },
+                "nlwiki": {
+                    "site": "nlwiki",
+                    "title": "St John's College",
+                    "badges": [],
+                    "url": "https://nl.wikipedia.org/wiki/St_John%27s_College"
+                },
+                "nowiki": {
+                    "site": "nowiki",
+                    "title": "St John's College",
+                    "badges": [],
+                    "url": "https://no.wikipedia.org/wiki/St_John%27s_College"
+                },
+                "plwiki": {
+                    "site": "plwiki",
+                    "title": "St John\u2019s College (Cambridge)",
+                    "badges": [],
+                    "url": "https://pl.wikipedia.org/wiki/St_John%E2%80%99s_College_(Cambridge)"
+                },
+                "pnbwiki": {
+                    "site": "pnbwiki",
+                    "title": "\u0633\u06cc\u0646\u0679 \u062c\u0627\u0646\u0632 \u06a9\u0627\u0644\u062c",
+                    "badges": [],
+                    "url": "https://pnb.wikipedia.org/wiki/%D8%B3%DB%8C%D9%86%D9%B9_%D8%AC%D8%A7%D9%86%D8%B2_%DA%A9%D8%A7%D9%84%D8%AC"
+                },
+                "ptwiki": {
+                    "site": "ptwiki",
+                    "title": "St John's College (Cambridge)",
+                    "badges": [],
+                    "url": "https://pt.wikipedia.org/wiki/St_John%27s_College_(Cambridge)"
+                },
+                "ruwiki": {
+                    "site": "ruwiki",
+                    "title": "\u041a\u043e\u043b\u043b\u0435\u0434\u0436 \u0421\u0432\u044f\u0442\u043e\u0433\u043e \u0418\u043e\u0430\u043d\u043d\u0430 (\u041a\u0435\u043c\u0431\u0440\u0438\u0434\u0436)",
+                    "badges": [],
+                    "url": "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B5%D0%B4%D0%B6_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B3%D0%BE_%D0%98%D0%BE%D0%B0%D0%BD%D0%BD%D0%B0_(%D0%9A%D0%B5%D0%BC%D0%B1%D1%80%D0%B8%D0%B4%D0%B6)"
+                },
+                "simplewiki": {
+                    "site": "simplewiki",
+                    "title": "St John's College, Cambridge",
+                    "badges": [],
+                    "url": "https://simple.wikipedia.org/wiki/St_John%27s_College,_Cambridge"
+                },
+                "urwiki": {
+                    "site": "urwiki",
+                    "title": "\u0633\u06cc\u0646\u0679 \u062c\u0627\u0646\u0632 \u06a9\u0627\u0644\u062c\u060c \u06a9\u06cc\u0645\u0628\u0631\u062c",
+                    "badges": [],
+                    "url": "https://ur.wikipedia.org/wiki/%D8%B3%DB%8C%D9%86%D9%B9_%D8%AC%D8%A7%D9%86%D8%B2_%DA%A9%D8%A7%D9%84%D8%AC%D8%8C_%DA%A9%DB%8C%D9%85%D8%A8%D8%B1%D8%AC"
+                },
+                "zhwiki": {
+                    "site": "zhwiki",
+                    "title": "\u5251\u6865\u5927\u5b66\u5723\u7ea6\u7ff0\u5b66\u9662",
+                    "badges": [],
+                    "url": "https://zh.wikipedia.org/wiki/%E5%89%91%E6%A1%A5%E5%A4%A7%E5%AD%A6%E5%9C%A3%E7%BA%A6%E7%BF%B0%E5%AD%A6%E9%99%A2"
+                }
+            }
+        }
+    }
+}

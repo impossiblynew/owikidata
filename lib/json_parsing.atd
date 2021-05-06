@@ -1,0 +1,150 @@
+type langvalue = {
+    language: string;
+    value: string;
+}
+type rank = [
+      Preferred <json name="preferred">
+    | Normal <json name="normal">
+    | Deprecated <json name="deprecated">
+]
+
+
+type snaktype = [
+      Value <json name="value">
+    | SomeValue <json name="somevalue">
+    | NoValue <json name="novalue">
+]
+type wikibase_entityid = {
+    entity_type <json name="entity-type">: string;
+    id: string;
+    ?numeric_id <json name="numeric-id">: int option;
+}
+
+(*MAY BE STRINGS INSTEAD OF FLOATS*)
+type float_or_string <ocaml module="Yojson.Safe" t="t" > = abstract 
+
+type globecoordinate = {
+    latitude: float_or_string;
+    longitude: float_or_string;
+    ?precision: float_or_string option;
+    globe: string;
+}
+
+type quantity = {
+    amount: string;
+    ?upperBound: string option;
+    ?lowerBound: string option;
+    quantity_unit <json name="unit">: string;
+}
+
+type time = {
+    time: string;
+    timezone: int;
+    ?before: int option;
+    ?after: int option;
+    precision: int;
+    calendarmodel: string;
+}
+type monolingualtext = {
+    language: string;
+    text: string;
+}
+
+type string_value = {value: string}
+type wikibase_entityid_value = {value: wikibase_entityid}
+type globecoordinate_value = {value: globecoordinate}
+type quantity_value = {value: quantity}
+type time_value = {value: time}
+type monolingualtext_value = {value: monolingualtext}
+
+type datavalue = [
+      String <json name="string"> of string_value
+    | Wikibase_EntityId <json name="wikibase-entityid"> of wikibase_entityid_value
+    | GlobeCoordinate <json name="globecoordinate"> of globecoordinate_value
+    | Quantity <json name="quantity"> of quantity_value
+    | Time <json name="time"> of time_value
+    | MonolingualText <json name="monolingualtext"> of monolingualtext_value
+] <json adapter.ocaml="Atdgen_runtime.Json_adapter.Type_field">
+
+type snak = {
+    snaktype: snaktype;
+    property: string;
+    ?datatype: string option;
+    ?datavalue: datavalue option;
+}
+type reference = {
+    hash: string;
+    snaks: (string * snak list) list <json repr="object">;
+    snaks_order <json name="snaks-order">: string list;
+}
+
+type statement = {
+    id: string;
+    mainsnak: snak;
+    entity_type <json name="type">: string;
+    rank: rank;
+    ?qualifiers: (string * snak list) list <json repr="object"> option;
+    ?references: reference list option;
+}
+
+type sitelink = {
+    site: string;
+    title: string;
+    badges: string list;
+    ?url: string option;
+}
+
+type item = {
+    id: string;
+    entity_type <json name="type">: string;
+    lastrevid: int;
+    labels: (string * langvalue) list  <json repr="object">;
+    descriptions: (string * langvalue) list  <json repr="object">;
+    aliases: (string * langvalue list) list  <json repr="object">;
+    claims: (string * statement list) list <json repr="object">;
+    ?sitelinks: (string * sitelink) list <json repr="object"> option; (* does this need to be an option? *)
+    ?modified: string option;
+}
+
+type property = {
+    id: string;
+    entity_type <json name="type">: string;
+    datatype: string;
+    lastrevid: int;
+    labels: (string * langvalue) list  <json repr="object">;
+    descriptions: (string * langvalue) list  <json repr="object">;
+    aliases: (string * langvalue list) list  <json repr="object">;
+    claims: (string * statement list) list <json repr="object">;
+    ?modified: string option;
+}
+
+type lexeme = {
+    id: string;
+    entity_type <json name="type">: string;
+    lexical_category <json name="lexicalCategory">: string;
+    language: string;
+    claims: (string * statement list) list <json repr="object">;
+}
+
+type entity = [
+      Item <json name="item"> of item
+    | Property <json name="property"> of property
+    | Lexeme <json name="lexeme"> of lexeme
+] <json adapter.ocaml="Atdgen_runtime.Json_adapter.Type_field">
+(*
+type property = {
+    id: string;
+    entity_type <json name="type">: string;
+    ?datatype: string option;
+    lastrevid: int;
+    labels: (string * langvalue) list  <json repr="object">;
+    descriptions: (string * langvalue) list  <json repr="object">;
+    aliases: (string * langvalue list) list  <json repr="object">;
+    claims: (string * statement list) list <json repr="object">;
+    ?modified: string option;
+}
+*)
+
+type entities = {
+    entities: (string * entity) list <json repr="object">
+}
