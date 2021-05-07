@@ -130,6 +130,17 @@ module Statement :
     (** Represents the rank of a Wikidata Statement. For more information, please visit
     {{: https://www.wikidata.org/wiki/Help:Ranking} the Wikidata Help page for Rankings}.*)
 
+    (** {2:truthiness "Truthiness"}
+    
+    While not defined in the official glossary, in Wikidata terminology, {e truthiness}
+    is a property of Statements, defined by having the highest rank (that isn't
+    deprecated) for any Statement for a given Property. For example, if an Item
+    [Q] has two Preferred, one Normal, and one Deprecated Statement for the Property
+    [PX], then the two Preferred Statements are considered {e truthy}. If that same
+    Item has three Preferred Statements for the property [PY], then all three are
+    considered truthy. And if property [PZ] of that same item has ten Statements,
+    all Deprecated, then none are considered truthy.*)
+
     (** {1:references References}*)
 
     type reference = {
@@ -161,6 +172,8 @@ module Statement :
     }
     (** Represents {{: https://www.wikidata.org/wiki/Wikidata:Glossary#Statement}
     Wikidata Statements}. *)
+
+
     
     (** {1:conversions Conversions }*)
 
@@ -278,12 +291,12 @@ module Entity :
 
           {- [ all_truthy_statements : (propertyid * Statement.t list) list ]
           
-          Returns all "truthy" Statements about this Item in an associative list
+          Returns all {{!section:Statement.truthiness} "truthy"} Statements about this Item in an associative list
           between Property IDs and their corresponding Statements.}
 
           {- [ truthy_statements : propertyid -> Statement.t list ]
 
-          Given a Property ID, returns the list of "truthy" Statements corresponding
+          Given a Property ID, returns the list of {{!section:Statement.truthiness} "truthy"} Statements corresponding
           to that Property for this Item. If that Property ID isn't present or there
           are none, returns an empty list. }
 
@@ -368,12 +381,12 @@ module Entity :
 
           {- [ all_truthy_statements : (propertyid * Statement.t list) list ]
           
-          Returns all "truthy" Statements about this Property in an associative list
+          Returns all {{!section:Statement.truthiness} "truthy"} Statements about this Property in an associative list
           between Property IDs and their corresponding Statements.}
 
           {- [ truthy_statements : propertyid -> Statement.t list ]
 
-          Given a Property ID, returns the list of "truthy" Statements corresponding
+          Given a Property ID, returns the list of {{!section:Statement.truthiness} "truthy"} Statements corresponding
           to that Property for this Property. If that Property ID isn't present or there
           are none, returns an empty list. }
           }
