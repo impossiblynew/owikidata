@@ -55,6 +55,14 @@ module Q1038788 = struct
     ((Wikidata.Entity.Item.of_string s)#label "en")
 end
 
+module Q2 = struct
+  let s = read_whole_file "./testfiles/Q2.json"
+
+  let label () =
+    Alcotest.(check string) "Construct and get label" "Earth"
+    ((Wikidata.Entity.Item.of_entities_string s)#label "en")
+end
+
 let () =
   let open Alcotest in
   run "Wikidata Tests" [
@@ -72,6 +80,9 @@ let () =
       ];
       "Q1038788 - Basic Test in Dump Format", [
         test_case "label" `Quick Q1038788.label;
+      ];
+      "Q2 - Basic Test", [
+        test_case "label" `Quick Q2.label;
       ]
 
   ]
