@@ -112,7 +112,7 @@ module Snak = struct
           | Some "wikibase_sense", Some `Wikibase_EntityId {value = {entity_type; id; numeric_id}} -> Sense {entity_type; id; numeric_id}
           | None, _ -> bad_json_data "datatype is none despite snaktype being value"
           | _, None -> bad_json_data "datavalue is none despite snaktype being value"
-          | _, _ -> bad_json_data "mismatched datatype and valuetype or unexpected datatype"
+          | Some s, _ -> bad_json_data ("mismatched datatype and valuetype or unexpected datatype: " ^ s)
         in
           Value value
   let of_string s = s |> InternalJsonRep.snak_of_string |> of_data
