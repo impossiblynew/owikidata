@@ -11,36 +11,51 @@ $ opam install ./owikidata
 ```
 
 ## Example
-Here's a simple example of this library in action:
+Here's a simple example of this library in action, demonstrating a simple module for retrieving
+Wikidata Entities from wikidata.org, and the benefits of Row Polymorphism.
 ```ocaml
 (* example.ml *)
 open Cohttp
 open Cohttp_lwt_unix
-open Lwt.Infix
+open Lwt.Syntax
 
+(* A simple module that retrieves data from wikidata.org, then turns it into an
+OCaml object using the Wikidata library. *)
 module WikidataOrg = struct
-  let wikidata_base_url = "https://www.wikidata.org/wiki/Special:EntityData/"
   exception Bad_response_code of int
 
-  let get_json_from_api ?(base_url=wikidata_base_url) id =
-    let url = base_url ^ id ^ ".json" in
-    Client.get (Uri.of_string url) >>= fun (resp, body) ->
-      let code = resp |> Response.status |> Code.code_of_status in
-      if code <> 200 then raise (Bad_response_code code)
-      else body |> Cohttp_lwt.Body.to_string
+  let wikidata_base_url = "https://www.wikidata.org/wiki/Special:EntityData/"
+
+  (* Retrieves a JSON string from Wikidata's Linked Data Interface *)
+  let get_string_from_api ?(base_url=wikidata_base_url) id =
+    let uri = Uri.of_string (base_url ^ id ^ ".json") in
+    let* resp, body = Client.get uri in
+    let code = resp |> Response.status |> Code.code_of_status in
+    if code <> 200 then raise (Bad_response_code code)
+    else body |> Cohttp_lwt.Body.to_string
   
-  let entity_of_json_lwt x = Lwt.map Wikidata.Entity.of_entities_string x
-  let get_entity id = id |> get_json_from_api |> entity_of_json_lwt
+  (* Takes a JSON string of entities retrieved from Wikidata's Linked Data Interface
+  and converts it to a Wikidata.Entity.t using the .of_entities_string function *)
+  let get_entity_from_api ?(base_url=wikidata_base_url) id =
+    let+ s = get_string_from_api ~base_url:base_url id in
+    Wikidata.Entity.of_entities_string s
 end
 
-let label_desc_of_entity lang e = (e#label lang) ^ ": " ^ (e#description lang)
+(* A simple function that makes use of row polymorphism to work on both Items
+and Properties. *)
+let string_of_entity lang e =
+  Printf.sprintf "%s = %s: %s" e#id (e#label lang) (e#description lang)
 
-let label_desc_of_id lang id = Lwt.map (function
-  | Wikidata.Entity.Item e -> label_desc_of_entity lang e
-  | Wikidata.Entity.Property e -> label_desc_of_entity lang e)
-  (WikidataOrg.get_entity id)
 
-let () = Sys.argv.(1) |> (label_desc_of_id Sys.argv.(2)) |> Lwt_main.run |> print_endline
+let () = Lwt_main.run begin
+  let id = Sys.argv.(1) in
+  let lang = Sys.argv.(2) in
+  let+ e = WikidataOrg.get_entity_from_api id in
+  let entity_string = match e with
+  | Item i -> string_of_entity lang i
+  | Property p -> string_of_entity lang p in
+  print_endline entity_string
+end
 ```
 
 Running
@@ -50,13 +65,13 @@ $ ocamlfind opt -linkpkg -thread -package lwt.unix,cohttp-lwt-unix,wikidata exam
 will produce a small command line program that can be used to get labels and descriptions of Wikidata Entities in a given language:
 ```console
 $ ./a.out Q42 en
-Douglas Adams: English writer and humorist
+Q42 = Douglas Adams: English writer and humorist
 $ ./a.out Q42 fr
-Douglas Adams: écrivain anglais de science-fiction
+Q42 = Douglas Adams: écrivain anglais de science-fiction
 $ ./a.out P943 en
-programmer: the programmer that wrote the piece of software
+P943 = programmer: the programmer that wrote the piece of software
 $ ./a.out P943 fr
-programmeur: développeur d'un logiciel ou d'une oeuvre numérique comme un jeu vidéo
+P943 = programmeur: développeur d'un logiciel ou d'une oeuvre numérique comme un jeu vidéo
 ```
 
 
