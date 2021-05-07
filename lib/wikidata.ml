@@ -178,13 +178,13 @@ module Entity = struct
       List.map
       (fun (p, sts) -> (p, List.map (fun s -> Statement.of_data s) sts))
       claims
-    method claim_groups : (propertyid * Statement.t list) list = claim_groups
-    method claim_group (p : propertyid) = match List.assoc_opt p claim_groups with
+    method all_statements : (propertyid * Statement.t list) list = claim_groups
+    method statements (p : propertyid) = match List.assoc_opt p claim_groups with
       | Some cs -> cs
       | None -> []
-    method truthy_claim_groups : (propertyid * Statement.t list) list =
+    method all_truthy_statements : (propertyid * Statement.t list) list =
       List.map (fun (s, c) -> (s, truthy_claims c)) claim_groups
-    method truthy_claim_group (p : propertyid) = match List.assoc_opt p claim_groups with
+    method truthy_statements (p : propertyid) = match List.assoc_opt p claim_groups with
       | Some cs -> (truthy_claims cs) 
       | None -> []
   end
