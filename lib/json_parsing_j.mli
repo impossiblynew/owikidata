@@ -35,6 +35,8 @@ type quantity = Json_parsing_t.quantity = {
 
 type quantity_value = Json_parsing_t.quantity_value = { value: quantity }
 
+type number = Yojson.Safe.t
+
 type monolingualtext = Json_parsing_t.monolingualtext = {
   language: string;
   text: string
@@ -44,12 +46,10 @@ type monolingualtext_value = Json_parsing_t.monolingualtext_value = {
   value: monolingualtext
 }
 
-type float_or_string = Yojson.Safe.t
-
 type globecoordinate = Json_parsing_t.globecoordinate = {
-  latitude: float_or_string;
-  longitude: float_or_string;
-  precision: float_or_string option;
+  latitude: number;
+  longitude: number;
+  precision: number option;
   globe: string
 }
 
@@ -293,6 +293,26 @@ val quantity_value_of_string :
   string -> quantity_value
   (** Deserialize JSON data of type {!quantity_value}. *)
 
+val write_number :
+  Bi_outbuf.t -> number -> unit
+  (** Output a JSON value of type {!number}. *)
+
+val string_of_number :
+  ?len:int -> number -> string
+  (** Serialize a value of type {!number}
+      into a JSON string.
+      @param len specifies the initial length
+                 of the buffer used internally.
+                 Default: 1024. *)
+
+val read_number :
+  Yojson.Safe.lexer_state -> Lexing.lexbuf -> number
+  (** Input JSON data of type {!number}. *)
+
+val number_of_string :
+  string -> number
+  (** Deserialize JSON data of type {!number}. *)
+
 val write_monolingualtext :
   Bi_outbuf.t -> monolingualtext -> unit
   (** Output a JSON value of type {!monolingualtext}. *)
@@ -332,26 +352,6 @@ val read_monolingualtext_value :
 val monolingualtext_value_of_string :
   string -> monolingualtext_value
   (** Deserialize JSON data of type {!monolingualtext_value}. *)
-
-val write_float_or_string :
-  Bi_outbuf.t -> float_or_string -> unit
-  (** Output a JSON value of type {!float_or_string}. *)
-
-val string_of_float_or_string :
-  ?len:int -> float_or_string -> string
-  (** Serialize a value of type {!float_or_string}
-      into a JSON string.
-      @param len specifies the initial length
-                 of the buffer used internally.
-                 Default: 1024. *)
-
-val read_float_or_string :
-  Yojson.Safe.lexer_state -> Lexing.lexbuf -> float_or_string
-  (** Input JSON data of type {!float_or_string}. *)
-
-val float_or_string_of_string :
-  string -> float_or_string
-  (** Deserialize JSON data of type {!float_or_string}. *)
 
 val write_globecoordinate :
   Bi_outbuf.t -> globecoordinate -> unit

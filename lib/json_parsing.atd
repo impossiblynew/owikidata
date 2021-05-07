@@ -21,12 +21,12 @@ type wikibase_entityid = {
 }
 
 (*MAY BE STRINGS INSTEAD OF FLOATS*)
-type float_or_string <ocaml module="Yojson.Safe" t="t" > = abstract 
+type number <ocaml module="Yojson.Safe" t="t" > = abstract 
 
 type globecoordinate = {
-    latitude: float_or_string;
-    longitude: float_or_string;
-    ?precision: float_or_string option;
+    latitude: number;
+    longitude: number;
+    ?precision: number option;
     globe: string;
 }
 

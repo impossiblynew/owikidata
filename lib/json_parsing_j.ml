@@ -35,6 +35,8 @@ type quantity = Json_parsing_t.quantity = {
 
 type quantity_value = Json_parsing_t.quantity_value = { value: quantity }
 
+type number = Yojson.Safe.t
+
 type monolingualtext = Json_parsing_t.monolingualtext = {
   language: string;
   text: string
@@ -44,12 +46,10 @@ type monolingualtext_value = Json_parsing_t.monolingualtext_value = {
   value: monolingualtext
 }
 
-type float_or_string = Yojson.Safe.t
-
 type globecoordinate = Json_parsing_t.globecoordinate = {
-  latitude: float_or_string;
-  longitude: float_or_string;
-  precision: float_or_string option;
+  latitude: number;
+  longitude: number;
+  precision: number option;
   globe: string
 }
 
@@ -1492,6 +1492,18 @@ let read_quantity_value = (
 )
 let quantity_value_of_string s =
   read_quantity_value (Yojson.Safe.init_lexer ()) (Lexing.from_string s)
+let write_number = (
+  Yojson.Safe.write_t
+)
+let string_of_number ?(len = 1024) x =
+  let ob = Bi_outbuf.create len in
+  write_number ob x;
+  Bi_outbuf.contents ob
+let read_number = (
+  Yojson.Safe.read_t
+)
+let number_of_string s =
+  read_number (Yojson.Safe.init_lexer ()) (Lexing.from_string s)
 let write_monolingualtext : _ -> monolingualtext -> _ = (
   fun ob (x : monolingualtext) ->
     Bi_outbuf.add_char ob '{';
@@ -1743,21 +1755,9 @@ let read_monolingualtext_value = (
 )
 let monolingualtext_value_of_string s =
   read_monolingualtext_value (Yojson.Safe.init_lexer ()) (Lexing.from_string s)
-let write_float_or_string = (
-  Yojson.Safe.write_t
-)
-let string_of_float_or_string ?(len = 1024) x =
-  let ob = Bi_outbuf.create len in
-  write_float_or_string ob x;
-  Bi_outbuf.contents ob
-let read_float_or_string = (
-  Yojson.Safe.read_t
-)
-let float_or_string_of_string s =
-  read_float_or_string (Yojson.Safe.init_lexer ()) (Lexing.from_string s)
 let write__2 = (
   Atdgen_runtime.Oj_run.write_std_option (
-    write_float_or_string
+    write_number
   )
 )
 let string_of__2 ?(len = 1024) x =
@@ -1777,7 +1777,7 @@ let read__2 = (
             | "Some" ->
               Atdgen_runtime.Oj_run.read_until_field_value p lb;
               let x = (
-                  read_float_or_string
+                  read_number
                 ) p lb
               in
               Yojson.Safe.read_space p lb;
@@ -1800,7 +1800,7 @@ let read__2 = (
               Yojson.Safe.read_comma p lb;
               Yojson.Safe.read_space p lb;
               let x = (
-                  read_float_or_string
+                  read_number
                 ) p lb
               in
               Yojson.Safe.read_space p lb;
@@ -1822,7 +1822,7 @@ let write_globecoordinate : _ -> globecoordinate -> _ = (
       Bi_outbuf.add_char ob ',';
     Bi_outbuf.add_string ob "\"latitude\":";
     (
-      write_float_or_string
+      write_number
     )
       ob x.latitude;
     if !is_first then
@@ -1831,7 +1831,7 @@ let write_globecoordinate : _ -> globecoordinate -> _ = (
       Bi_outbuf.add_char ob ',';
     Bi_outbuf.add_string ob "\"longitude\":";
     (
-      write_float_or_string
+      write_number
     )
       ob x.longitude;
     (match x.precision with None -> () | Some x ->
@@ -1841,7 +1841,7 @@ let write_globecoordinate : _ -> globecoordinate -> _ = (
         Bi_outbuf.add_char ob ',';
       Bi_outbuf.add_string ob "\"precision\":";
       (
-        write_float_or_string
+        write_number
       )
         ob x;
     );
@@ -1927,7 +1927,7 @@ let read_globecoordinate = (
             field_latitude := (
               Some (
                 (
-                  read_float_or_string
+                  read_number
                 ) p lb
               )
             );
@@ -1935,7 +1935,7 @@ let read_globecoordinate = (
             field_longitude := (
               Some (
                 (
-                  read_float_or_string
+                  read_number
                 ) p lb
               )
             );
@@ -1944,7 +1944,7 @@ let read_globecoordinate = (
               field_precision := (
                 Some (
                   (
-                    read_float_or_string
+                    read_number
                   ) p lb
                 )
               );
@@ -2020,7 +2020,7 @@ let read_globecoordinate = (
               field_latitude := (
                 Some (
                   (
-                    read_float_or_string
+                    read_number
                   ) p lb
                 )
               );
@@ -2028,7 +2028,7 @@ let read_globecoordinate = (
               field_longitude := (
                 Some (
                   (
-                    read_float_or_string
+                    read_number
                   ) p lb
                 )
               );
@@ -2037,7 +2037,7 @@ let read_globecoordinate = (
                 field_precision := (
                   Some (
                     (
-                      read_float_or_string
+                      read_number
                     ) p lb
                   )
                 );

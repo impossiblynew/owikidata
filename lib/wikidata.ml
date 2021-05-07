@@ -82,6 +82,7 @@ module Snak = struct
             let to_float = function
             | `Float f -> f
             | `String s -> float_of_string s
+            | `Int i -> float_of_int i
             | _ -> bad_json_data "field in globe-coordinate was not float or string" in
             let latitude  = to_float latitude in
             let longitude = to_float longitude in

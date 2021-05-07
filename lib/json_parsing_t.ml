@@ -33,16 +33,16 @@ type quantity = {
 
 type quantity_value = { value: quantity }
 
+type number = Yojson.Safe.t
+
 type monolingualtext = { language: string; text: string }
 
 type monolingualtext_value = { value: monolingualtext }
 
-type float_or_string = Yojson.Safe.t
-
 type globecoordinate = {
-  latitude: float_or_string;
-  longitude: float_or_string;
-  precision: float_or_string option;
+  latitude: number;
+  longitude: number;
+  precision: number option;
   globe: string
 }
 
