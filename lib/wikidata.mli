@@ -421,13 +421,3 @@ module Entity :
     format that requests to [https://wikidata.org/wiki/Special:EntityData/{ID}.json] 
     (where [ID] is a Wikidata Entity ID) are returned in. *)
   end
-(*
-module Example : sig
-  type t = <
-    method1 : string; (** does x *)
-    method2 : int -> unit; (** does y *)
-    method3 : string -> int list; (* does z *)
-    method4 : int -> int -> int -> string;
-    method5 : string -> string -> string;
-    >
- end *)
