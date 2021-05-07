@@ -16,10 +16,10 @@ depends: [
   "ocaml" {>= "4.11.1"}
   "cohttp-lwt-unix" {>= "4.0.0" & with-test}
   "tls" {>= "0.13.0" & with-test}
-  "atdgen" {>= "2.2.1" & build}
+  "atdgen" {build}
   "atdgen-runtime" {>= "2.2.1"}
   "alcotest" {>= "1.4.0" & with-test}
-  "odoc" {>= "1.5.2" & with-doc}
+  "odoc" {with-doc}
 ]
 build: [
   ["dune" "subst"] {dev}
