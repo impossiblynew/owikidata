@@ -50,5 +50,5 @@ let () =
       Alcotest_lwt.test_case "get_label" `Slow test_q42
     ];
     "many Items",
-    List.map make_entity_parse_test (id_from_to "Q" 1 10)
+    List.map make_entity_parse_test (id_from_to "Q" 0 100)
   ]
