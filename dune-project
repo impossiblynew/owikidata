@@ -30,17 +30,11 @@
    (and
     (>= 0.13.0)
     :with-test))
-  (atdgen
-   (and
-    (>= 2.2.1)
-    :build))
+  (atdgen :build)
   (atdgen-runtime
    (>= 2.2.1))
   (alcotest
    (and
     (>= 1.4.0)
     :with-test))
-  (odoc
-   (and
-    (>= 1.5.2)
-    :with-doc))))
+  (odoc :with-doc)))
