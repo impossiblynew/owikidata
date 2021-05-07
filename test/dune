@@ -3,14 +3,12 @@
  (modules local)
  (libraries cohttp-lwt-unix atdgen-runtime alcotest alcotest-lwt wikidata))
 
-(test
+(executable
  (name online)
  (modules online)
  (libraries cohttp-lwt-unix atdgen-runtime alcotest alcotest-lwt wikidata)
  (preprocess
-  (pps lwt_ppx))
- (action
-  (run %{test} -q)))
+  (pps lwt_ppx)))
 
 (rule
  (alias "runtest-online-slow")
