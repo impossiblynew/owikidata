@@ -63,6 +63,19 @@ module Q2 = struct
     ((Wikidata.Entity.Item.of_entities_string s)#label "en")
 end
 
+let make_file_test f =
+  let test () = 
+    let s = read_whole_file f in
+    let _ = Wikidata.Entity.Item.of_entities_string s in () in
+  Alcotest.test_case f `Quick test
+
+let automated_tests () =
+  let auto_dir = "./testfiles/automated/" in
+  let files = Sys.readdir auto_dir in
+  let files = Array.map (fun f -> auto_dir ^ f) files in
+  Array.to_list (Array.map make_file_test files)
+
+
 let () =
   let open Alcotest in
   run "Wikidata Tests" [
@@ -83,6 +96,7 @@ let () =
       ];
       "Q2 - Basic Test", [
         test_case "label" `Quick Q2.label;
-      ]
+      ];
+      "Automated Construction Tests", automated_tests ()
 
   ]
