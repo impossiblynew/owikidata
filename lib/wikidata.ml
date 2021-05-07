@@ -109,7 +109,7 @@ module Snak = struct
           | Some "tabular-data", Some `String {value} -> TabularData value
           | Some "wikibase-lexeme", Some `Wikibase_EntityId {value = {entity_type; id; numeric_id}} -> Lexeme {entity_type; id; numeric_id}
           | Some "wikibase-form", Some `Wikibase_EntityId {value = {entity_type; id; numeric_id}} -> Form {entity_type; id; numeric_id}
-          | Some "wikibase_sense", Some `Wikibase_EntityId {value = {entity_type; id; numeric_id}} -> Sense {entity_type; id; numeric_id}
+          | Some "wikibase-sense", Some `Wikibase_EntityId {value = {entity_type; id; numeric_id}} -> Sense {entity_type; id; numeric_id}
           | None, _ -> bad_json_data "datatype is none despite snaktype being value"
           | _, None -> bad_json_data "datavalue is none despite snaktype being value"
           | Some s, _ -> bad_json_data ("mismatched datatype and valuetype or unexpected datatype: " ^ s)
