@@ -3,6 +3,13 @@
 
 An OCaml library for parsing Wikidata JSON strings into more OCaml-friendly formats. It does not currently provide any faculties for retrieving Wikidata JSON strings.
 
+## Installation
+Clone the repository, then use opam to install:
+```console
+$ git clone https://github.com/impossiblynew/owikidata.git
+$ opam install ./owikidata
+```
+
 ## Example
 Here's a simple example of this library in action:
 ```ocaml
