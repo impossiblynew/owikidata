@@ -1,3 +1,18 @@
 (test
- (name wikidata_tests)
- (libraries cohttp-lwt-unix atdgen-runtime alcotest wikidata))
+ (name local)
+ (modules local)
+ (libraries cohttp-lwt-unix atdgen-runtime alcotest alcotest-lwt wikidata))
+
+(test
+ (name online)
+ (modules online)
+ (libraries cohttp-lwt-unix atdgen-runtime alcotest alcotest-lwt wikidata)
+ (preprocess
+  (pps lwt_ppx))
+ (action
+  (run %{test} -q)))
+
+(rule
+ (alias "runtest-online-slow")
+ (action
+  (run ./online.exe)))

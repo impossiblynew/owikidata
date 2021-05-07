@@ -37,4 +37,12 @@
    (and
     (>= 1.4.0)
     :with-test))
+  (alcotest-lwt
+   (and
+    (>= 1.4.0)
+    :with-test))
+  (lwt_ppx
+   (and
+    (>= 2.0.2)
+    :with-test))
   (odoc :with-doc)))
