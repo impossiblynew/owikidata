@@ -1,7 +1,7 @@
 # owikidata - OCaml Wikidata
 **WARNING - THIS LIBRARY IS IN ALPHA - EXPECT RANDOM BREAKING CHANGES**
 
-An OCaml library for parsing Wikidata JSON strings into more OCaml-friendly formats. It does not currently provide any faculties for retrieving Wikidata JSON strings.
+An OCaml library (inspired by [qwikidata](https://github.com/kensho-technologies/qwikidata)) for parsing Wikidata JSON strings into more OCaml-friendly formats. It does not currently provide any faculties for retrieving Wikidata JSON strings.
 
 ## Installation
 Clone the repository, then use opam to install:
