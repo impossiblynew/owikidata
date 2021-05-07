@@ -30,7 +30,7 @@ module Q42 = struct
   let get_property () =
     Alcotest.(check string) "Get property" "Q14623683" (
       let q42 = Wikidata.Entity.Item.of_entities_string q42_string in
-      match (q42#truthy_claim_group "P40" |> List.hd) .mainsnak with
+      match (q42#truthy_statements "P40" |> List.hd) .mainsnak with
       | Wikidata.Snak.Value (Wikidata.Snak.Item {id; _}) -> id
       | _ -> raise Not_found
       )
@@ -42,7 +42,7 @@ module Q691283 = struct
   let snak () =
     Alcotest.(check @@ float epsilon_float) "Get latitude" 52.208055555556 (
       let q = Wikidata.Entity.Item.of_entities_string s in
-      match (q#truthy_claim_group "P625" |> List.hd).mainsnak with
+      match (q#truthy_statements "P625" |> List.hd).mainsnak with
       | Wikidata.Snak.(Value GlobeCoordinate {latitude; _}) -> latitude
       | _ -> raise Not_found  )
 end

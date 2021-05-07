@@ -230,10 +230,10 @@ module Entity :
             label : lang -> string;
             aliases : lang -> string list;
             description : lang -> string;
-            claim_groups : (propertyid * Statement.t list) list;
-            claim_group : propertyid -> Statement.t list;
-            truthy_claim_groups : (propertyid * Statement.t list) list;
-            truthy_claim_group : propertyid -> Statement.t list;
+            all_statements : (propertyid * Statement.t list) list;
+            statements : propertyid -> Statement.t list;
+            all_truthy_statements : (propertyid * Statement.t list) list;
+            truthy_statements : propertyid -> Statement.t list;
             sitelinks : (string * sitelink) list;
           >
           (** Represents Wikidata Items.
@@ -265,25 +265,25 @@ module Entity :
           Wikidata language code}, returns the description for the Item in that
           language.}
 
-          {- [ claim_groups : (propertyid * Statement.t list) list ]
+          {- [ all_statements : (propertyid * Statement.t list) list ]
           
-          Returns all Statements/Claims about this Item in an associative list
+          Returns all Statements about this Item in an associative list
           between Property IDs and their corresponding Statements.}
 
-          {- [ claim_group : propertyid -> Statement.t list ]
+          {- [ statements : propertyid -> Statement.t list ]
           
-          Given a Property ID, returns the list of Statements/Claims corresponding
+          Given a Property ID, returns the list of Statements corresponding
           to that Property for this Item. If that Property ID isn't present, returns
           an empty list.}
 
-          {- [ truthy_claim_groups : (propertyid * Statement.t list) list ]
+          {- [ all_truthy_statements : (propertyid * Statement.t list) list ]
           
-          Returns all "truthy" Statements/Claims about this Item in an associative list
+          Returns all "truthy" Statements about this Item in an associative list
           between Property IDs and their corresponding Statements.}
 
-          {- [ truthy_claim_group : propertyid -> Statement.t list ]
+          {- [ truthy_statements : propertyid -> Statement.t list ]
 
-          Given a Property ID, returns the list of "truthy" Statements/Claims corresponding
+          Given a Property ID, returns the list of "truthy" Statements corresponding
           to that Property for this Item. If that Property ID isn't present or there
           are none, returns an empty list. }
 
@@ -321,10 +321,10 @@ module Entity :
           label : lang -> string;
           aliases : lang -> string list;
           description : lang -> string;
-          claim_groups : (propertyid * Statement.t list) list;
-          claim_group : propertyid -> Statement.t list;
-          truthy_claim_groups : (propertyid * Statement.t list) list;
-          truthy_claim_group : propertyid -> Statement.t list;
+          all_statements : (propertyid * Statement.t list) list;
+          statements : propertyid -> Statement.t list;
+          all_truthy_statements : (propertyid * Statement.t list) list;
+          truthy_statements : propertyid -> Statement.t list;
         >
         (** Represents Wikidata Properties.
           {ul 
@@ -355,25 +355,25 @@ module Entity :
           Wikidata language code}, returns the description for the Property in that
           language.}
 
-          {- [ claim_groups : (propertyid * Statement.t list) list ]
+          {- [ all_statements : (propertyid * Statement.t list) list ]
           
-          Returns all Statements/Claims about this Property in an associative list
+          Returns all Statements about this Property in an associative list
           between Property IDs and their corresponding Statements.}
 
-          {- [ claim_group : propertyid -> Statement.t list ]
+          {- [ statements : propertyid -> Statement.t list ]
           
-          Given a Property ID, returns the list of Statements/Claims corresponding
+          Given a Property ID, returns the list of Statements corresponding
           to that Property for this Property. If that Property ID isn't present, returns
           an empty list.}
 
-          {- [ truthy_claim_groups : (propertyid * Statement.t list) list ]
+          {- [ all_truthy_statements : (propertyid * Statement.t list) list ]
           
-          Returns all "truthy" Statements/Claims about this Property in an associative list
+          Returns all "truthy" Statements about this Property in an associative list
           between Property IDs and their corresponding Statements.}
 
-          {- [ truthy_claim_group : propertyid -> Statement.t list ]
+          {- [ truthy_statements : propertyid -> Statement.t list ]
 
-          Given a Property ID, returns the list of "truthy" Statements/Claims corresponding
+          Given a Property ID, returns the list of "truthy" Statements corresponding
           to that Property for this Property. If that Property ID isn't present or there
           are none, returns an empty list. }
           }
