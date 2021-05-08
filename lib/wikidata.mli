@@ -327,70 +327,63 @@ module Entity :
     (** Represents {{: https://www.wikidata.org/wiki/Wikidata:Glossary#Property} Wikidata Properties}. *)
     module Property :
       sig
-        type t = <
-          id : string;
-          entity_type : string;
-          datatype : string;
-          label : lang -> string;
-          aliases : lang -> string list;
-          description : lang -> string;
-          all_statements : (propertyid * Statement.t list) list;
-          statements : propertyid -> Statement.t list;
-          all_truthy_statements : (propertyid * Statement.t list) list;
-          truthy_statements : propertyid -> Statement.t list;
-        >
-        (** Represents Wikidata Properties.
-          {ul 
-          {- [ id : string ]
-          
-          Returns the {{: https://www.wikidata.org/wiki/Wikidata:Identifiers} Property
-          ID} of the Property.}
+        class t :
+              id:lang ->
+              entity_type:lang ->
+              labels:(lang * lang) list ->
+              descriptions:(lang * lang) list ->
+              aliases:(lang * lang list) list ->
+              statements:(lang * Statement.t list) list ->
+              datatype:lang ->
+            object
+              method id : string
+              (** Returns the {{: https://www.wikidata.org/wiki/Wikidata:Identifiers}
+              Property ID} of the Property. *)
 
-          {- [ entity_type : string ]
+              method entity_type : string
+              (**  Returns the entry for [type] in the
+              {{: https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_json.html#json_structure}
+              original json.} For Properties, should always return ["property"]*)
 
-          Returns the entry for [type] in the {{: https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_json.html#json_structure}
-          original json.} For Properties, should always return ["property"]}
+              method datatype : string
+              (** *)
 
-          {- [ label : lang -> string ]
+              method label : lang -> string
+              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+              Wikidata language code}, returns the label of the Property in that
+              language.*)
 
-          Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-          Wikidata language code}, returns the label of the Property in that language.}
+              method aliases : lang -> string list
+              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+              Wikidata language code}, returns a list of aliases for the Property
+              in that language.*)
 
-          {- [ aliases : lang -> string list ]
+              method description : lang -> string
+              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+              Wikidata language code}, returns the description for the Property
+              in that language.*)
 
-          Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-          Wikidata language code}, returns a list of aliases for the Property in that
-          language.}
+              method all_statements : (propertyid * Statement.t list) list
+              (** Returns all Statements about this Property in an associative list
+              between Property IDs and their corresponding Statements.*)
 
-          {- [ description : lang -> string ]
+              method statements : propertyid -> Statement.t list
+              (** Given a Property ID, returns the list of Statements corresponding
+              to that Property for this Property. If that Property ID isn't present,
+              returns an empty list.*)
 
-          Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-          Wikidata language code}, returns the description for the Property in that
-          language.}
-
-          {- [ all_statements : (propertyid * Statement.t list) list ]
-          
-          Returns all Statements about this Property in an associative list
-          between Property IDs and their corresponding Statements.}
-
-          {- [ statements : propertyid -> Statement.t list ]
-          
-          Given a Property ID, returns the list of Statements corresponding
-          to that Property for this Property. If that Property ID isn't present, returns
-          an empty list.}
-
-          {- [ all_truthy_statements : (propertyid * Statement.t list) list ]
-          
-          Returns all {{!section:Statement.truthiness} "truthy"} Statements about this Property in an associative list
-          between Property IDs and their corresponding Statements.}
-
-          {- [ truthy_statements : propertyid -> Statement.t list ]
-
-          Given a Property ID, returns the list of {{!section:Statement.truthiness} "truthy"} Statements corresponding
-          to that Property for this Property. If that Property ID isn't present or there
-          are none, returns an empty list. }
-          }
-          *)
+              method all_truthy_statements : (propertyid * Statement.t list) list
+              (** Returns all {{!section:Statement.truthiness} "truthy"} Statements
+              about this Property in an associative list between Property IDs and
+              their corresponding Statements.*)
+              
+              method truthy_statements : propertyid -> Statement.t list
+              (** Given a Property ID, returns the list of {{!section:Statement.truthiness}
+              "truthy"} Statements corresponding to that Property for this Property.
+              If that Property ID isn't present or there are none, returns an empty
+              list.*)
+            end
+          (** Represents Wikidata Properties. *)
         
         (** {1:conversions Conversions}*)
 
