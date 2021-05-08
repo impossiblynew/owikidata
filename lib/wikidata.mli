@@ -327,14 +327,18 @@ module Entity :
     (** Represents {{: https://www.wikidata.org/wiki/Wikidata:Glossary#Property} Wikidata Properties}. *)
     module Property :
       sig
+
+        (** {e Be sure not to miss the documentation of the following class's methods,
+        which can be accessed by clicking on the [t] or by {{!t} clicking here}}.*)
+
         class t :
-              id:lang ->
-              entity_type:lang ->
-              labels:(lang * lang) list ->
-              descriptions:(lang * lang) list ->
-              aliases:(lang * lang list) list ->
-              statements:(lang * Statement.t list) list ->
-              datatype:lang ->
+              id:string ->
+              entity_type:string ->
+              labels:(lang * string) list ->
+              descriptions:(lang * string) list ->
+              aliases:(lang * string list) list ->
+              statements:(propertyid * Statement.t list) list ->
+              datatype:string ->
             object
               method id : string
               (** Returns the {{: https://www.wikidata.org/wiki/Wikidata:Identifiers}
@@ -385,7 +389,11 @@ module Entity :
               If that Property ID isn't present or there are none, returns an empty
               list.*)
             end
-          (** Represents Wikidata Properties. *)
+          (** Represents Wikidata Properties.
+          
+          Note that while this object {i may} be constructed from this class manually,
+          the expected use is to use the {!of_string} and {!of_entities_string}
+          functions instead. *)
         
         (** {1:conversions Conversions}*)
 
