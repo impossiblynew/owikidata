@@ -72,7 +72,7 @@ module Snak = struct
 
   type t = Value of data | SomeValue | NoValue
 
-  let of_data (data : InternalJsonRep.snak) = match data.snaktype with
+  let of_internal (data : InternalJsonRep.snak) = match data.snaktype with
     | `NoValue -> NoValue
     | `SomeValue -> SomeValue
     | `Value ->
@@ -115,7 +115,7 @@ module Snak = struct
           | Some s, _ -> bad_json_data ("mismatched datatype and valuetype or unexpected datatype: " ^ s)
         in
           Value value
-  let of_string s = s |> InternalJsonRep.snak_of_string |> of_data
+  let of_string s = s |> InternalJsonRep.snak_of_string |> of_internal
 end
 
 
@@ -129,15 +129,15 @@ module Statement = struct
     qualifiers: (string * Snak.t list) list;
     references: reference list;
   }
-  let of_data (data : InternalJsonRep.statement) : t =
+  let of_internal (data : InternalJsonRep.statement) : t =
     let id = data.id in
     let rank = match data.rank with
     | `Preferred -> Preferred
     |  `Normal -> Normal
     | `Deprecated -> Deprecated in
-    let mainsnak = Snak.of_data data.mainsnak in
+    let mainsnak = Snak.of_internal data.mainsnak in
     let qualifiers = match data.qualifiers with
-    | Some l -> List.map (fun (p, snaks) -> p, List.map Snak.of_data snaks) l
+    | Some l -> List.map (fun (p, snaks) -> p, List.map Snak.of_internal snaks) l
     | None -> [] in
     let references = match data.references with
     | Some refs ->
@@ -145,47 +145,43 @@ module Statement = struct
           (fun (r: InternalJsonRep.reference) ->
             {
               hash = r.hash;
-              snaks = (List.map (fun (p, s) -> (p, List.map Snak.of_data s)) r.snaks);
+              snaks = (List.map (fun (p, s) -> (p, List.map Snak.of_internal s)) r.snaks);
               snaks_order = r.snaks_order;
             }) 
           refs
     | None -> [] in
     {id; rank; mainsnak; qualifiers; references}
-  let of_string s = s |> InternalJsonRep.statement_of_string |> of_data
+  let of_string s = s |> InternalJsonRep.statement_of_string |> of_internal
 end
 
 module Entity = struct
-  class basic_entity ~id ~entity_type ~labels ~descriptions ~aliases =
+  class basic_entity
+      ~(id : string)
+      ~(entity_type : string)
+      ~(labels : (lang * string) list)
+      ~(descriptions : (lang * string) list)
+      ~(aliases : (lang * string list) list) =
     object
       method id : string = id
       method entity_type : string = entity_type
-      method label (lang : lang) : string =
-        let (lv : InternalJsonRep.langvalue) = List.assoc lang labels in
-        lv.value
-      method description (lang : lang) : string =
-        let (lv : InternalJsonRep.langvalue) = List.assoc lang descriptions in
-        lv.value
-      method aliases (lang : lang) : string list =
-        List.assoc lang aliases |> List.map (fun (lv : InternalJsonRep.langvalue) -> lv.value)
+      method label (lang : lang) : string = List.assoc lang labels
+      method description (lang : lang) : string = List.assoc lang descriptions
+      method aliases (lang : lang) : string list = List.assoc lang aliases
       end
-
+    
   let truthy_claims (claims : Statement.t list) =
     match List.filter (fun (c : Statement.t) -> c.rank = Preferred) claims with
     | [] -> List.filter (fun (c : Statement.t) -> c.rank <> Deprecated) claims
     | preferred -> preferred
- 
-  class virtual claims_mixin ~claims = object
-    val claim_groups =
-      List.map
-      (fun (p, sts) -> (p, List.map (fun s -> Statement.of_data s) sts))
-      claims
-    method all_statements : (propertyid * Statement.t list) list = claim_groups
-    method statements (p : propertyid) = match List.assoc_opt p claim_groups with
+
+  class virtual claims_mixin ~(claims : (lang * Statement.t list) list) = object
+    method all_statements : (propertyid * Statement.t list) list = claims
+    method statements (p : propertyid) = match List.assoc_opt p claims with
       | Some cs -> cs
       | None -> []
     method all_truthy_statements : (propertyid * Statement.t list) list =
-      List.map (fun (s, c) -> (s, truthy_claims c)) claim_groups
-    method truthy_statements (p : propertyid) = match List.assoc_opt p claim_groups with
+      List.map (fun (s, c) -> (s, truthy_claims c)) claims
+    method truthy_statements (p : propertyid) = match List.assoc_opt p claims with
       | Some cs -> (truthy_claims cs) 
       | None -> []
   end
@@ -198,65 +194,165 @@ module Entity = struct
   module Item = struct
     type sitelink = {site: string; title: string; badges: string list; url : string option}
 
-    class t (data : InternalJsonRep.item) = object
+    class t
+        ~(id : string)
+        ~(entity_type : string)
+        ~(labels : (lang * string) list)
+        ~(descriptions : (lang * string) list)
+        ~(aliases : (lang * string list) list)
+        ~(statements : (propertyid * Statement.t list) list)
+        ~(sitelinks : (string * sitelink) list)
+        = object
       inherit basic_entity
-        ~id: data.id
-        ~entity_type: data.entity_type
-        ~labels: data.labels
-        ~descriptions: data.descriptions
-        ~aliases: data.aliases
+        ~id: id
+        ~entity_type: entity_type
+        ~labels: labels
+        ~descriptions: descriptions
+        ~aliases: aliases
       inherit claims_mixin
-        ~claims: data.claims
-      method sitelinks : (string * sitelink) list =
-        match data.sitelinks with
-        | Some l -> (List.map (fun (s, (sl : InternalJsonRep.sitelink)) -> (s, {site = sl.site; title = sl.title; badges = sl.badges; url = sl.url})) l)
-        | None -> [] 
-    end
-
-    let of_string s = s |> InternalJsonRep.item_of_string |> new t
+        ~claims: statements
+      method sitelinks : (string * sitelink) list = sitelinks
+    end        
     
+    let of_internal (i : InternalJsonRep.item) =
+      let id = i.id in
+      let entity_type = i.entity_type in
+      let labels =
+        List.map
+          (fun (p, (lv : InternalJsonRep.langvalue)) -> (p, lv.value))
+          i.labels in
+      let descriptions =
+        List.map
+          (fun (p, (lv : InternalJsonRep.langvalue)) -> (p, lv.value))
+          i.descriptions in
+      let aliases =
+        List.map
+          (fun (p, (lvl : InternalJsonRep.langvalue list)) ->
+            p,
+            List.map
+              (fun (lv : InternalJsonRep.langvalue) -> lv.value)
+              lvl
+          )
+          i.aliases in
+      let statements =
+        List.map
+          (fun (p, (stl : InternalJsonRep.statement list)) ->
+            p,
+            List.map
+              (fun (st : InternalJsonRep.statement) -> Statement.of_internal st)
+              stl
+          )
+          i.claims in
+      let sitelinks = match i.sitelinks with
+        | Some l -> (
+          List.map (
+            fun (s, (sl : InternalJsonRep.sitelink)) ->
+              (s, {site = sl.site; title = sl.title; badges = sl.badges; url = sl.url})
+              )
+            l
+          )
+        | None -> []  in
+      new t
+        ~id:id
+        ~entity_type:entity_type
+        ~labels:labels
+        ~descriptions:descriptions
+        ~aliases:aliases
+        ~statements:statements
+        ~sitelinks:sitelinks
+    
+    
+    let of_string s = s |> InternalJsonRep.item_of_string |> of_internal  
+
     let unpack_from_internal_entity : InternalJsonRep.entity -> InternalJsonRep.item = function
     | `Item i -> i
     | _ -> raise @@ Invalid_argument "expected entity of item type"
 
     let of_entities_string s = s |> internal_entity_of_entities_string
-      |> unpack_from_internal_entity |> new t
+      |> unpack_from_internal_entity |> of_internal
     
   end
 
   module Property = struct 
-    class t (data : InternalJsonRep.property) = object
+    class t
+        ~(id : string)
+        ~(entity_type : string)
+        ~(labels : (lang * string) list)
+        ~(descriptions : (lang * string) list)
+        ~(aliases : (lang * string list) list)
+        ~(statements : (propertyid * Statement.t list) list)
+        ~(datatype : string)
+        = object
       inherit basic_entity
-        ~id: data.id
-        ~entity_type: data.entity_type
-        ~labels: data.labels
-        ~descriptions: data.descriptions
-        ~aliases: data.aliases
+        ~id: id
+        ~entity_type: entity_type
+        ~labels: labels
+        ~descriptions: descriptions
+        ~aliases: aliases
       inherit claims_mixin
-        ~claims: data.claims
-      method datatype : string = data.datatype (* change this to be more expressive *)
+        ~claims: statements
+      method datatype : string = datatype (* change this to be more expressive *)
     end
 
-    let of_string s = s |> InternalJsonRep.property_of_string |> new t
+    let of_internal (i : InternalJsonRep.property) =
+      let id = i.id in
+      let entity_type = i.entity_type in
+      let labels =
+        List.map
+          (fun (p, (lv : InternalJsonRep.langvalue)) -> (p, lv.value))
+          i.labels in
+      let descriptions =
+        List.map
+          (fun (p, (lv : InternalJsonRep.langvalue)) -> (p, lv.value))
+          i.descriptions in
+      let aliases =
+        List.map
+          (fun (p, (lvl : InternalJsonRep.langvalue list)) ->
+            p,
+            List.map
+              (fun (lv : InternalJsonRep.langvalue) -> lv.value)
+              lvl
+          )
+          i.aliases in
+      let statements =
+        List.map
+          (fun (p, (stl : InternalJsonRep.statement list)) ->
+            p,
+            List.map
+              (fun (st : InternalJsonRep.statement) -> Statement.of_internal st)
+              stl
+          )
+          i.claims in
+      let datatype = i.datatype in
+      new t
+        ~id
+        ~entity_type
+        ~labels
+        ~descriptions
+        ~aliases
+        ~statements
+        ~datatype
+
+    let of_string s = s |> InternalJsonRep.property_of_string |> of_internal
 
     let unpack_from_internal_entity : InternalJsonRep.entity -> InternalJsonRep.property = function
     | `Property p -> p
     | _ -> raise @@ Invalid_argument "expected entity of property type"
 
     let of_entities_string s = s |> internal_entity_of_entities_string
-      |> unpack_from_internal_entity |> new t
+      |> unpack_from_internal_entity |> of_internal
   end
 
   type t = Item of Item.t | Property of Property.t
 
-  let of_internal_entity : InternalJsonRep.entity -> t = function
-  | `Item i -> Item (new Item.t i)
-  | `Property p -> Property (new Property.t p)
+  let of_internal : InternalJsonRep.entity -> t = function
+  | `Item i -> Item (Item.of_internal i)
+  | `Property p -> Property (Property.of_internal p)
   | _ -> raise Not_implemented
 
-  let of_string s : t = s |> InternalJsonRep.entity_of_string |> of_internal_entity
+  let of_string s : t = s |> InternalJsonRep.entity_of_string |> of_internal
   
-  let of_entities_string s : t = s |> internal_entity_of_entities_string |> of_internal_entity
+  let of_entities_string s : t = s |> internal_entity_of_entities_string |> of_internal
 
   
 
