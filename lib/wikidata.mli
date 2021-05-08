@@ -341,12 +341,14 @@ module Entity :
               Property ID} of the Property. *)
 
               method entity_type : string
-              (**  Returns the entry for [type] in the
+              (** Returns the entry for [type] in the
               {{: https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_json.html#json_structure}
               original json.} For Properties, should always return ["property"]*)
 
               method datatype : string
-              (** *)
+              (** Returns a string representing the expected {{: https://www.wikidata.org/wiki/Help:Data_type}
+              datatype} of its mainsnak. No guarantees are made about mappings from
+              strings returned by this method to the variants of {!Snak.data}. *)
 
               method label : lang -> string
               (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
