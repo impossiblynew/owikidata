@@ -215,7 +215,57 @@ module Entity :
 
       *)
       (* FIXME: test this works*)
+
+    (** {2 Virtual Classes}
+    These classes are not meant to be instantiated, but represent features that
+    are implemented in the non-virtual classes {!Item.t} and {!Property.t}. *)
     
+    class virtual basic_entity :
+          id: string ->
+          entity_type: string ->
+        object
+          method id : string
+          (** Returns the {{: https://www.wikidata.org/wiki/Wikidata:Identifiers}
+          Wikidata Identifier} of the Entity. *)
+
+          method entity_type : string
+          (** Returns the entry for [type] in the
+          {{: https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_json.html#json_structure}
+          original json.} *)
+        end
+    
+    class virtual label_description_aliases_mixin :
+          labels: (lang * string) list ->
+          descriptions: (lang * string) list ->
+          aliases: (lang * string list) list ->
+        object      
+          method label : lang -> string
+          (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+          Wikidata language code}, returns the label of the Entity in that language. *)
+
+          method label_opt : lang -> string option
+          (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+          Wikidata language code}, returns the label of the Entity in that language
+          as an option type, returning [None] if no label is found for that language.*)
+
+          method aliases : lang -> string list
+          (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+          Wikidata language code}, returns a list of aliases for the Entity in that
+          language. Returns an empty list if none are found. *)
+
+          method description : lang -> string
+          (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+          Wikidata language code}, returns the description for the Entity in that
+          language.*)
+
+          method description_opt : lang -> string option
+          (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+          Wikidata language code}, returns the description for the Entity in that
+          language as an option type, returning [None] if none is found for that
+          language.*)
+        end
+                
+
     (** {2 Items}*)
 
     (** Represents {{: https://www.wikidata.org/wiki/Wikidata:Glossary#Item} Wikidata Items}. *)
@@ -248,39 +298,8 @@ module Entity :
             statements:(propertyid * Statement.t list) list ->
             sitelinks:(string * sitelink) list ->
           object
-            method id : string
-            (** Returns the {{: https://www.wikidata.org/wiki/Wikidata:Glossary#QID}
-            QID} of the item.*)
-
-            method entity_type : string
-            (** Returns the entry for [type] in the
-            {{: https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_json.html#json_structure}
-            original json.} For Items, should always return ["item"].*)
-
-            method label : lang -> string
-            (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-            Wikidata language code}, returns the label of the Item in that language. *)
-
-            method label_opt : lang -> string option
-            (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-            Wikidata language code}, returns the label of the Item in that language
-            as an option type, returning [None] if no label is found for that language.*)
-
-            method aliases : lang -> string list
-            (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-            Wikidata language code}, returns a list of aliases for the Item in that
-            language. Returns an empty list if none are found. *)
-
-            method description : lang -> string
-            (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-            Wikidata language code}, returns the description for the Item in that
-            language.*)
-
-            method description_opt : lang -> string option
-            (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-            Wikidata language code}, returns the description for the Item in that
-            language as an option type, returning [None] if none is found for that
-            language.*)
+            inherit basic_entity
+            inherit label_description_aliases_mixin
 
             method all_statements : (propertyid * Statement.t list) list
             (** Returns all Statements about this Item in an associative list
@@ -345,47 +364,13 @@ module Entity :
               statements:(propertyid * Statement.t list) list ->
               datatype:string ->
             object
-              method id : string
-              (** Returns the {{: https://www.wikidata.org/wiki/Wikidata:Identifiers}
-              Property ID} of the Property. *)
-
-              method entity_type : string
-              (** Returns the entry for [type] in the
-              {{: https://doc.wikimedia.org/Wikibase/master/php/md_docs_topics_json.html#json_structure}
-              original json.} For Properties, should always return ["property"]*)
+              inherit basic_entity
+              inherit label_description_aliases_mixin 
 
               method datatype : string
               (** Returns a string representing the expected {{: https://www.wikidata.org/wiki/Help:Data_type}
               datatype} of its mainsnak. No guarantees are made about mappings from
               strings returned by this method to the variants of {!Snak.data}. *)
-
-              method label : lang -> string
-              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-              Wikidata language code}, returns the label of the Property in that
-              language.*)
-
-              
-              method label_opt : lang -> string option
-              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-              Wikidata language code}, returns the label of the Property in that
-              language as an option type, returning [None] if none is found for
-              that language. *)
-
-              method aliases : lang -> string list
-              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-              Wikidata language code}, returns a list of aliases for the Property
-              in that language. Returns an empty list if none are found. *)
-
-              method description : lang -> string
-              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-              Wikidata language code}, returns the description for the Property
-              in that language.*)
-
-              method description_opt : lang -> string option
-              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-              Wikidata language code}, returns the description for the Property
-              in that language as an option type, returning [None] if none is found
-              for that language. *)
 
               method all_statements : (propertyid * Statement.t list) list
               (** Returns all Statements about this Property in an associative list
