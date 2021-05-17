@@ -165,7 +165,9 @@ module Entity = struct
       method id : string = id
       method entity_type : string = entity_type
       method label (lang : lang) : string = List.assoc lang labels
+      method label_opt (lang : lang) : string option = List.assoc_opt lang labels
       method description (lang : lang) : string = List.assoc lang descriptions
+      method description_opt (lang : lang) : string option = List.assoc_opt lang descriptions
       method aliases (lang : lang) : string list = List.assoc lang aliases
       end
     
