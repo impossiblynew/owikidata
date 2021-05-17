@@ -249,11 +249,17 @@ module Entity :
           (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
           Wikidata language code}, returns the label of the Entity in that language
           as an option type, returning [None] if no label is found for that language.*)
+          
+          method all_labels : (lang * string) list
+          (** Returns an association list between language codes and labels. *)
 
           method aliases : lang -> string list
           (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
           Wikidata language code}, returns a list of aliases for the Entity in that
           language. Returns an empty list if none are found. *)
+          
+          method all_aliases : (lang * string list) list
+          (** Returns an association list between language codes and labels. *)
 
           method description : lang -> string
           (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
@@ -265,6 +271,9 @@ module Entity :
           Wikidata language code}, returns the description for the Entity in that
           language as an option type, returning [None] if none is found for that
           language.*)
+
+          method all_descriptions : (lang * string) list
+          (** Returns an association list between language codes and descriptions. *)
         end
     
     (** Mixin for Statements. *)
@@ -361,23 +370,23 @@ module Entity :
         which can be accessed by clicking on the [t] or by {{!t} clicking here}}.*)
 
         class t :
-              id:string ->
-              entity_type:string ->
-              labels:(lang * string) list ->
-              descriptions:(lang * string) list ->
-              aliases:(lang * string list) list ->
-              statements:(propertyid * Statement.t list) list ->
-              datatype:string ->
-            object
-              inherit basic_entity
-              inherit label_description_aliases_mixin 
-              inherit statements_mixin
+            id:string ->
+            entity_type:string ->
+            labels:(lang * string) list ->
+            descriptions:(lang * string) list ->
+            aliases:(lang * string list) list ->
+            statements:(propertyid * Statement.t list) list ->
+            datatype:string ->
+          object
+            inherit basic_entity
+            inherit label_description_aliases_mixin 
+            inherit statements_mixin
 
-              method datatype : string
-              (** Returns a string representing the expected {{: https://www.wikidata.org/wiki/Help:Data_type}
-              datatype} of its mainsnak. No guarantees are made about mappings from
-              strings returned by this method to the variants of {!Snak.data}. *)
-            end
+            method datatype : string
+            (** Returns a string representing the expected {{: https://www.wikidata.org/wiki/Help:Data_type}
+            datatype} of its mainsnak. No guarantees are made about mappings from
+            strings returned by this method to the variants of {!Snak.data}. *)
+          end
           (** Represents Wikidata Properties.
           
           Note that while this object {i may} be constructed from this class manually,
