@@ -243,7 +243,8 @@ module Entity :
         object      
           method label : lang -> string
           (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
-          Wikidata language code}, returns the label of the Entity in that language. *)
+          Wikidata language code}, returns the label of the Entity in that language.
+          @raise NotFound if no label is found for this language *)
 
           method label_opt : lang -> string option
           (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
@@ -264,7 +265,8 @@ module Entity :
           method description : lang -> string
           (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
           Wikidata language code}, returns the description for the Entity in that
-          language. *)
+          language.
+          @raise NotFound if no label is found for this language *)
 
           method description_opt : lang -> string option
           (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
