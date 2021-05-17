@@ -18,6 +18,18 @@ module Q42 = struct
     Alcotest.(check string) "Label" "Douglas Adams"
       (let q42 = Wikidata.Entity.Item.of_entities_string q42_string in q42#label "en")
   
+  let label_exn () =
+    Alcotest.check_raises "Label Exception" Not_found (fun () ->
+      let q42 = Wikidata.Entity.Item.of_entities_string q42_string in
+      let _ = q42#label "not real language" in ())
+  
+  let label_opt () =
+    Alcotest.(check @@ option string) "Some" (Some "Douglas Adams") (
+      let q42 = Wikidata.Entity.Item.of_entities_string q42_string in
+      q42#label_opt "en");
+    Alcotest.(check @@ option string) "None" (None) (
+      let q42 = Wikidata.Entity.Item.of_entities_string q42_string in
+      q42#label_opt "fake language") 
   let description () =
     Alcotest.(check string) "Description" "English writer and humorist"
     ((Wikidata.Entity.Item.of_entities_string q42_string)#description "en")
@@ -81,6 +93,8 @@ let () =
       "Q42 - Basic Tests", [
         test_case "ID" `Quick Q42.id;
         test_case "label" `Quick Q42.label;
+        test_case "label exn" `Quick Q42.label_exn;
+        test_case "label opt" `Quick Q42.label_opt;
         test_case "description" `Quick Q42.description;
         test_case "aliases" `Quick Q42.aliases;
         ];
