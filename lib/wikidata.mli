@@ -188,7 +188,7 @@ module Entity :
   sig
     (** {i Please note that currently only Items and Properties are supported.}
 
-    {1 Rationale}
+    {1 Why Objects?}
 
     Unlike most other Wikidata things in this library, Entities are represented
     by {e objects} rather than records. This is because many Entities share fields,
@@ -264,7 +264,7 @@ module Entity :
           method description : lang -> string
           (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
           Wikidata language code}, returns the description for the Entity in that
-          language.*)
+          language. *)
 
           method description_opt : lang -> string option
           (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
