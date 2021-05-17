@@ -115,7 +115,7 @@ end
 let make_file_test dir f =
   let test () = 
     let s = read_whole_file (dir ^ "/" ^ f) in
-    let _ = Wikidata.Entity.Item.of_entities_string s in () in
+    let _ = Wikidata.Entity.of_entities_string s in () in
   Alcotest.test_case f `Quick test
 
 let automated_tests () =
