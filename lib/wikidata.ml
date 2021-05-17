@@ -12,37 +12,6 @@ type lang = string
 
 let bad_json_data msg = raise (Bad_json_data msg)
 
-(* Consider moving this inside the corresponding class for each *)
-(* Maybe make it so that one can implement their own module for retrieving data*)
-(*
-module JsonData = struct
-    
-    exception Bad_response_code of int
-
-    type entity = InternalJsonRep.entity
-    let wikidata_base_url = "https://www.wikidata.org/wiki/Special:EntityData/"
-      
-    let get_json_from_api_lwt base_url id =
-      let url = base_url ^ id ^ ".json" in
-      Client.get (Uri.of_string url) >>= fun (resp, body) ->
-      let code = resp |> Response.status |> Code.code_of_status in
-      if code <> 200 then raise (Bad_response_code code)
-      else body |> Cohttp_lwt.Body.to_string
-
-    let get_json_from_api ?(base_url = wikidata_base_url) id =
-      get_json_from_api_lwt base_url id |> Lwt_main.run
-
-    (*TODO: make this work with single *)
-    let data_of_json json =
-      try InternalJsonRep.entity_of_string json 
-      (*FIXME: use a more specific exception *)
-      with _ -> match InternalJsonRep.entities_of_string json with
-        | {entities = (_, entity)::_;} -> entity
-        | _ -> bad_json_data "Empty entities dict"
-    
-    let get_data_from_api ?(base_url = wikidata_base_url) id = id |> (get_json_from_api ~base_url: base_url) |> data_of_json
-end
-*)
 module Snak = struct
   type wikibase_entityid = {entity_type: string; id: string; numeric_id: int option}
   type globecoordinate = {latitude: float; longitude: float; precision: float option; globe: string}
