@@ -269,7 +269,7 @@ module Entity :
             method aliases : lang -> string list
             (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
             Wikidata language code}, returns a list of aliases for the Item in that
-            language.*)
+            language. Returns an empty list if none are found. *)
 
             method description : lang -> string
             (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
@@ -374,7 +374,7 @@ module Entity :
               method aliases : lang -> string list
               (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
               Wikidata language code}, returns a list of aliases for the Property
-              in that language.*)
+              in that language. Returns an empty list if none are found. *)
 
               method description : lang -> string
               (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}

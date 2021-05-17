@@ -168,7 +168,10 @@ module Entity = struct
       method label_opt (lang : lang) : string option = List.assoc_opt lang labels
       method description (lang : lang) : string = List.assoc lang descriptions
       method description_opt (lang : lang) : string option = List.assoc_opt lang descriptions
-      method aliases (lang : lang) : string list = List.assoc lang aliases
+      method aliases (lang : lang) : string list =
+        match List.assoc_opt lang aliases with
+        | Some l -> l
+        | None -> []
       end
     
   let truthy_claims (claims : Statement.t list) =
