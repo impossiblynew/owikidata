@@ -220,6 +220,7 @@ module Entity :
     These classes are not meant to be instantiated, but represent features that
     are implemented in the non-virtual classes {!Item.t} and {!Property.t}. *)
     
+    (** Implements basic Entity functionality. *)
     class virtual basic_entity :
           id: string ->
           entity_type: string ->
@@ -234,6 +235,7 @@ module Entity :
           original json.} *)
         end
     
+    (** Mixin for labels, descriptions, and aliases *)
     class virtual label_description_aliases_mixin :
           labels: (lang * string) list ->
           descriptions: (lang * string) list ->
@@ -265,6 +267,7 @@ module Entity :
           language.*)
         end
     
+    (** Mixin for Statements. *)
     class virtual statements_mixin : statements: (lang * Statement.t list) list -> object
       method all_statements : (propertyid * Statement.t list) list
       (** Returns all Statements about this Entity in an associative list between
@@ -284,11 +287,7 @@ module Entity :
       (** Given a Property ID, returns the list of {{!section:Statement.truthiness}
       "truthy"} Statements corresponding to that Entity for this Item. If that Property
       ID isn't present or there are none, returns an empty list. *)
-    end
-
-
-
-                
+    end                
 
     (** {2 Items}*)
 
