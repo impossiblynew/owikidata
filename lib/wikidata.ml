@@ -153,14 +153,14 @@ module Entity = struct
     | [] -> List.filter (fun (c : Statement.t) -> c.rank <> Deprecated) claims
     | preferred -> preferred
 
-  class virtual claims_mixin ~(claims : (lang * Statement.t list) list) = object
-    method all_statements : (propertyid * Statement.t list) list = claims
-    method statements (p : propertyid) = match List.assoc_opt p claims with
+  class virtual statements_mixin ~(statements : (lang * Statement.t list) list) = object
+    method all_statements : (propertyid * Statement.t list) list = statements
+    method statements (p : propertyid) = match List.assoc_opt p statements with
       | Some cs -> cs
       | None -> []
     method all_truthy_statements : (propertyid * Statement.t list) list =
-      List.map (fun (s, c) -> (s, truthy_claims c)) claims
-    method truthy_statements (p : propertyid) = match List.assoc_opt p claims with
+      List.map (fun (s, c) -> (s, truthy_claims c)) statements
+    method truthy_statements (p : propertyid) = match List.assoc_opt p statements with
       | Some cs -> (truthy_claims cs) 
       | None -> []
   end
