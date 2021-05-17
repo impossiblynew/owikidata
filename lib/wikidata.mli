@@ -249,11 +249,17 @@ module Entity :
           (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
           Wikidata language code}, returns the label of the Entity in that language
           as an option type, returning [None] if no label is found for that language.*)
+          
+          method all_labels : (lang * string) list
+          (** Returns an association list between language codes and labels. *)
 
           method aliases : lang -> string list
           (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
           Wikidata language code}, returns a list of aliases for the Entity in that
           language. Returns an empty list if none are found. *)
+          
+          method all_aliases : (lang * string list) list
+          (** Returns an association list between language codes and labels. *)
 
           method description : lang -> string
           (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
@@ -265,6 +271,9 @@ module Entity :
           Wikidata language code}, returns the description for the Entity in that
           language as an option type, returning [None] if none is found for that
           language.*)
+
+          method all_descriptions : (lang * string) list
+          (** Returns an association list between language codes and descriptions. *)
         end
     
     (** Mixin for Statements. *)

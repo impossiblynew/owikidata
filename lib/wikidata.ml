@@ -140,12 +140,15 @@ module Entity = struct
     object
       method label (lang : lang) : string = List.assoc lang labels
       method label_opt (lang : lang) : string option = List.assoc_opt lang labels
+      method all_labels : (lang * string) list = labels
       method description (lang : lang) : string = List.assoc lang descriptions
       method description_opt (lang : lang) : string option = List.assoc_opt lang descriptions
+      method all_descriptions : (lang * string) list = descriptions
       method aliases (lang : lang) : string list =
         match List.assoc_opt lang aliases with
         | Some l -> l
         | None -> []
+      method all_aliases : (lang * string list) list = aliases
       end
     
   let truthy_claims (claims : Statement.t list) =
