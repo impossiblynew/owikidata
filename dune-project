@@ -45,4 +45,8 @@
    (and
     (>= 2.0.2)
     :with-test))
+  (bisect_ppx
+   (and
+    (>= 2.5.0)
+    :with-test))
   (odoc :with-doc)))
