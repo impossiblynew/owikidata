@@ -261,14 +261,25 @@ module Entity :
             (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
             Wikidata language code}, returns the label of the Item in that language. *)
 
+            method label_opt : lang -> string option
+            (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+            Wikidata language code}, returns the label of the Item in that language
+            as an option type, returning [None] if no label is found for that language.*)
+
             method aliases : lang -> string list
             (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
             Wikidata language code}, returns a list of aliases for the Item in that
-            language.*)
+            language. Returns an empty list if none are found. *)
 
             method description : lang -> string
             (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
             Wikidata language code}, returns the description for the Item in that
+            language.*)
+
+            method description_opt : lang -> string option
+            (**  Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+            Wikidata language code}, returns the description for the Item in that
+            language as an option type, returning [None] if none is found for that
             language.*)
 
             method all_statements : (propertyid * Statement.t list) list
@@ -353,15 +364,28 @@ module Entity :
               Wikidata language code}, returns the label of the Property in that
               language.*)
 
+              
+              method label_opt : lang -> string option
+              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+              Wikidata language code}, returns the label of the Property in that
+              language as an option type, returning [None] if none is found for
+              that language. *)
+
               method aliases : lang -> string list
               (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
               Wikidata language code}, returns a list of aliases for the Property
-              in that language.*)
+              in that language. Returns an empty list if none are found. *)
 
               method description : lang -> string
               (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
               Wikidata language code}, returns the description for the Property
               in that language.*)
+
+              method description_opt : lang -> string option
+              (** Given a {{: https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all}
+              Wikidata language code}, returns the description for the Property
+              in that language as an option type, returning [None] if none is found
+              for that language. *)
 
               method all_statements : (propertyid * Statement.t list) list
               (** Returns all Statements about this Property in an associative list
