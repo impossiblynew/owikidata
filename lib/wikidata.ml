@@ -124,15 +124,20 @@ module Statement = struct
 end
 
 module Entity = struct
-  class basic_entity
+
+  class virtual basic_entity
       ~(id : string)
-      ~(entity_type : string)
+      ~(entity_type : string) =
+    object
+      method id : string = id
+      method entity_type : string = entity_type
+    end
+
+  class virtual label_description_aliases_mixin
       ~(labels : (lang * string) list)
       ~(descriptions : (lang * string) list)
       ~(aliases : (lang * string list) list) =
     object
-      method id : string = id
-      method entity_type : string = entity_type
       method label (lang : lang) : string = List.assoc lang labels
       method label_opt (lang : lang) : string option = List.assoc_opt lang labels
       method description (lang : lang) : string = List.assoc lang descriptions
@@ -148,14 +153,14 @@ module Entity = struct
     | [] -> List.filter (fun (c : Statement.t) -> c.rank <> Deprecated) claims
     | preferred -> preferred
 
-  class virtual claims_mixin ~(claims : (lang * Statement.t list) list) = object
-    method all_statements : (propertyid * Statement.t list) list = claims
-    method statements (p : propertyid) = match List.assoc_opt p claims with
+  class virtual statements_mixin ~(statements : (lang * Statement.t list) list) = object
+    method all_statements : (propertyid * Statement.t list) list = statements
+    method statements (p : propertyid) = match List.assoc_opt p statements with
       | Some cs -> cs
       | None -> []
     method all_truthy_statements : (propertyid * Statement.t list) list =
-      List.map (fun (s, c) -> (s, truthy_claims c)) claims
-    method truthy_statements (p : propertyid) = match List.assoc_opt p claims with
+      List.map (fun (s, c) -> (s, truthy_claims c)) statements
+    method truthy_statements (p : propertyid) = match List.assoc_opt p statements with
       | Some cs -> (truthy_claims cs) 
       | None -> []
   end
@@ -180,11 +185,12 @@ module Entity = struct
       inherit basic_entity
         ~id: id
         ~entity_type: entity_type
+      inherit label_description_aliases_mixin
         ~labels: labels
         ~descriptions: descriptions
         ~aliases: aliases
-      inherit claims_mixin
-        ~claims: statements
+      inherit statements_mixin
+        ~statements: statements
       method sitelinks : (string * sitelink) list = sitelinks
     end        
     
@@ -260,11 +266,12 @@ module Entity = struct
       inherit basic_entity
         ~id: id
         ~entity_type: entity_type
+      inherit label_description_aliases_mixin
         ~labels: labels
         ~descriptions: descriptions
         ~aliases: aliases
-      inherit claims_mixin
-        ~claims: statements
+      inherit statements_mixin
+        ~statements: statements
       method datatype : string = datatype (* change this to be more expressive *)
     end
 
