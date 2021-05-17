@@ -124,15 +124,20 @@ module Statement = struct
 end
 
 module Entity = struct
-  class basic_entity
+
+  class virtual basic_entity
       ~(id : string)
-      ~(entity_type : string)
+      ~(entity_type : string) =
+    object
+      method id : string = id
+      method entity_type : string = entity_type
+    end
+
+  class virtual label_description_aliases_mixin
       ~(labels : (lang * string) list)
       ~(descriptions : (lang * string) list)
       ~(aliases : (lang * string list) list) =
     object
-      method id : string = id
-      method entity_type : string = entity_type
       method label (lang : lang) : string = List.assoc lang labels
       method label_opt (lang : lang) : string option = List.assoc_opt lang labels
       method description (lang : lang) : string = List.assoc lang descriptions
@@ -180,6 +185,7 @@ module Entity = struct
       inherit basic_entity
         ~id: id
         ~entity_type: entity_type
+      inherit label_description_aliases_mixin
         ~labels: labels
         ~descriptions: descriptions
         ~aliases: aliases
@@ -260,6 +266,7 @@ module Entity = struct
       inherit basic_entity
         ~id: id
         ~entity_type: entity_type
+      inherit label_description_aliases_mixin
         ~labels: labels
         ~descriptions: descriptions
         ~aliases: aliases
