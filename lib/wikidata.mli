@@ -361,23 +361,23 @@ module Entity :
         which can be accessed by clicking on the [t] or by {{!t} clicking here}}.*)
 
         class t :
-              id:string ->
-              entity_type:string ->
-              labels:(lang * string) list ->
-              descriptions:(lang * string) list ->
-              aliases:(lang * string list) list ->
-              statements:(propertyid * Statement.t list) list ->
-              datatype:string ->
-            object
-              inherit basic_entity
-              inherit label_description_aliases_mixin 
-              inherit statements_mixin
+            id:string ->
+            entity_type:string ->
+            labels:(lang * string) list ->
+            descriptions:(lang * string) list ->
+            aliases:(lang * string list) list ->
+            statements:(propertyid * Statement.t list) list ->
+            datatype:string ->
+          object
+            inherit basic_entity
+            inherit label_description_aliases_mixin 
+            inherit statements_mixin
 
-              method datatype : string
-              (** Returns a string representing the expected {{: https://www.wikidata.org/wiki/Help:Data_type}
-              datatype} of its mainsnak. No guarantees are made about mappings from
-              strings returned by this method to the variants of {!Snak.data}. *)
-            end
+            method datatype : string
+            (** Returns a string representing the expected {{: https://www.wikidata.org/wiki/Help:Data_type}
+            datatype} of its mainsnak. No guarantees are made about mappings from
+            strings returned by this method to the variants of {!Snak.data}. *)
+          end
           (** Represents Wikidata Properties.
           
           Note that while this object {i may} be constructed from this class manually,
