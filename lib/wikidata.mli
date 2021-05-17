@@ -264,6 +264,30 @@ module Entity :
           language as an option type, returning [None] if none is found for that
           language.*)
         end
+    
+    class virtual statements_mixin : statements: (lang * Statement.t list) list -> object
+      method all_statements : (propertyid * Statement.t list) list
+      (** Returns all Statements about this Entity in an associative list between
+      Property IDs and their corresponding Statements. *)
+
+      method statements : propertyid -> Statement.t list
+      (** Given a Property ID, returns the list of Statements corresponding to that
+      Property for this Entity. If that Property ID isn't present, returns an empty
+      list. *)
+
+      method all_truthy_statements : (propertyid * Statement.t list) list
+      (** Returns all {{!section:Statement.truthiness} "truthy"} Statements about
+      this Entity in an associative list between Property IDs and their corresponding
+      Statements. *)
+
+      method truthy_statements : propertyid -> Statement.t list
+      (** Given a Property ID, returns the list of {{!section:Statement.truthiness}
+      "truthy"} Statements corresponding to that Entity for this Item. If that Property
+      ID isn't present or there are none, returns an empty list. *)
+    end
+
+
+
                 
 
     (** {2 Items}*)
@@ -300,26 +324,8 @@ module Entity :
           object
             inherit basic_entity
             inherit label_description_aliases_mixin
-
-            method all_statements : (propertyid * Statement.t list) list
-            (** Returns all Statements about this Item in an associative list
-            between Property IDs and their corresponding Statements. *)
-
-            method statements : propertyid -> Statement.t list
-            (** Given a Property ID, returns the list of Statements corresponding
-            to that Property for this Item. If that Property ID isn't present, returns
-            an empty list.*)
-
-            method all_truthy_statements : (propertyid * Statement.t list) list
-            (** Returns all {{!section:Statement.truthiness} "truthy"} Statements
-            about this Item in an associative list between Property IDs and their
-            corresponding Statements.*)
-
-            method truthy_statements : propertyid -> Statement.t list
-            (** Given a Property ID, returns the list of {{!section:Statement.truthiness}
-            "truthy"} Statements corresponding to that Property for this Item. If
-            that Property ID isn't present or there are none, returns an empty list. *)
-
+            inherit statements_mixin
+            
             method sitelinks : (string * sitelink) list
             (** Returns an associative list between Wikipedia language site identifiers
             and sitelinks.*)
@@ -366,31 +372,12 @@ module Entity :
             object
               inherit basic_entity
               inherit label_description_aliases_mixin 
+              inherit statements_mixin
 
               method datatype : string
               (** Returns a string representing the expected {{: https://www.wikidata.org/wiki/Help:Data_type}
               datatype} of its mainsnak. No guarantees are made about mappings from
               strings returned by this method to the variants of {!Snak.data}. *)
-
-              method all_statements : (propertyid * Statement.t list) list
-              (** Returns all Statements about this Property in an associative list
-              between Property IDs and their corresponding Statements.*)
-
-              method statements : propertyid -> Statement.t list
-              (** Given a Property ID, returns the list of Statements corresponding
-              to that Property for this Property. If that Property ID isn't present,
-              returns an empty list.*)
-
-              method all_truthy_statements : (propertyid * Statement.t list) list
-              (** Returns all {{!section:Statement.truthiness} "truthy"} Statements
-              about this Property in an associative list between Property IDs and
-              their corresponding Statements.*)
-              
-              method truthy_statements : propertyid -> Statement.t list
-              (** Given a Property ID, returns the list of {{!section:Statement.truthiness}
-              "truthy"} Statements corresponding to that Property for this Property.
-              If that Property ID isn't present or there are none, returns an empty
-              list.*)
             end
           (** Represents Wikidata Properties.
           

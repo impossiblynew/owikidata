@@ -189,8 +189,8 @@ module Entity = struct
         ~labels: labels
         ~descriptions: descriptions
         ~aliases: aliases
-      inherit claims_mixin
-        ~claims: statements
+      inherit statements_mixin
+        ~statements: statements
       method sitelinks : (string * sitelink) list = sitelinks
     end        
     
@@ -270,8 +270,8 @@ module Entity = struct
         ~labels: labels
         ~descriptions: descriptions
         ~aliases: aliases
-      inherit claims_mixin
-        ~claims: statements
+      inherit statements_mixin
+        ~statements: statements
       method datatype : string = datatype (* change this to be more expressive *)
     end
 
