@@ -60,6 +60,29 @@ module Q42 = struct
       | Wikidata.Snak.Value (Wikidata.Snak.Item {id; _}) -> id
       | _ -> raise Not_found
       )
+  
+  let get_property_truthy () =
+    Alcotest.(check @@ list string) "Truthy P735" ["Q463035"] (
+      let open Wikidata in
+      let q42 = Entity.Item.of_entities_string q42_string in
+      let truthy = q42#truthy_statements "P735" in
+      List.map 
+        (fun (s : Wikidata.Statement.t) -> match s.mainsnak with
+          | Value (Item {id; _}) -> id
+          | _ -> Alcotest.fail "Wrong data type")
+        truthy
+    )
+  let get_property_not_truthy () =
+    Alcotest.(check @@ list string) "Not Truthy P735" ["Q463035"; "Q19688263"] (
+      let open Wikidata in
+      let q42 = Entity.Item.of_entities_string q42_string in
+      let truthy = q42#statements "P735" in
+      List.map 
+        (fun (s : Wikidata.Statement.t) -> match s.mainsnak with
+          | Value (Item {id; _}) -> id
+          | _ -> Alcotest.fail "Wrong data type")
+        truthy
+    )
 end
 
 module Q691283 = struct
@@ -110,14 +133,15 @@ let () =
         test_case "label exn" `Quick Q42.label_exn;
         test_case "label opt" `Quick Q42.label_opt;
         test_case "description" `Quick Q42.description;
-        test_case "description exn" `Quick Q42.description_exn;
-        test_case "description opt" `Quick Q42.description_opt;
-        test_case "description" `Quick Q42.description;
+        test_case "desc exn" `Quick Q42.description_exn;
+        test_case "desc opt" `Quick Q42.description_opt;
         test_case "aliases" `Quick Q42.aliases;
         test_case "aliases empty" `Quick Q42.aliases_empty;
         ];
       "Q42 - Complex Tests", [
         test_case "get property" `Quick Q42.get_property;
+        test_case "prop truthy" `Quick Q42.get_property_truthy;
+        test_case "not truthy" `Quick Q42.get_property_not_truthy;
       ];
       "Q691283 - Complex Tests", [
         test_case "access snak" `Quick Q691283.snak;
