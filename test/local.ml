@@ -34,10 +34,24 @@ module Q42 = struct
     Alcotest.(check string) "Description" "English writer and humorist"
     ((Wikidata.Entity.Item.of_entities_string q42_string)#description "en")
 
+  let description_exn () =
+    Alcotest.check_raises "Description exn" Not_found ( fun () ->
+      let _ = (Wikidata.Entity.Item.of_entities_string q42_string)#description "fake lang" in 
+      ())
+
+  let description_opt () =
+    Alcotest.(check @@ option string) "Some" (Some "English writer and humorist")
+    ((Wikidata.Entity.Item.of_entities_string q42_string)#description_opt "en")
+
   let aliases () =
     Alcotest.(check @@ list string) "Aliases"
       ["Douglas Noel Adams"; "Douglas Noël Adams"; "Douglas N. Adams"]
       ((Wikidata.Entity.Item.of_entities_string q42_string)#aliases "en")
+  
+  let aliases_empty () =
+    Alcotest.(check @@ list string) "Empty" []
+      ((Wikidata.Entity.Item.of_entities_string q42_string)#aliases "fake lang")
+    
 
   let get_property () =
     Alcotest.(check string) "Get property" "Q14623683" (
@@ -96,7 +110,11 @@ let () =
         test_case "label exn" `Quick Q42.label_exn;
         test_case "label opt" `Quick Q42.label_opt;
         test_case "description" `Quick Q42.description;
+        test_case "description exn" `Quick Q42.description_exn;
+        test_case "description opt" `Quick Q42.description_opt;
+        test_case "description" `Quick Q42.description;
         test_case "aliases" `Quick Q42.aliases;
+        test_case "aliases empty" `Quick Q42.aliases_empty;
         ];
       "Q42 - Complex Tests", [
         test_case "get property" `Quick Q42.get_property;
