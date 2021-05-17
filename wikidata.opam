@@ -21,6 +21,7 @@ depends: [
   "alcotest" {>= "1.4.0" & with-test}
   "alcotest-lwt" {>= "1.4.0" & with-test}
   "lwt_ppx" {>= "2.0.2" & with-test}
+  "bisect_ppx" {>= "2.5.0" & with-test}
   "odoc" {with-doc}
 ]
 build: [

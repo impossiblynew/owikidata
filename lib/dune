@@ -1,7 +1,9 @@
 (library
  (public_name wikidata)
  (name wikidata)
- (libraries yojson atdgen-runtime))
+ (libraries yojson atdgen-runtime)
+ (instrumentation
+  (backend bisect_ppx)))
 
 (rule
  (targets json_parsing_j.ml json_parsing_j.mli)

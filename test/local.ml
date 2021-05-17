@@ -18,14 +18,40 @@ module Q42 = struct
     Alcotest.(check string) "Label" "Douglas Adams"
       (let q42 = Wikidata.Entity.Item.of_entities_string q42_string in q42#label "en")
   
+  let label_exn () =
+    Alcotest.check_raises "Label Exception" Not_found (fun () ->
+      let q42 = Wikidata.Entity.Item.of_entities_string q42_string in
+      let _ = q42#label "not real language" in ())
+  
+  let label_opt () =
+    Alcotest.(check @@ option string) "Some" (Some "Douglas Adams") (
+      let q42 = Wikidata.Entity.Item.of_entities_string q42_string in
+      q42#label_opt "en");
+    Alcotest.(check @@ option string) "None" (None) (
+      let q42 = Wikidata.Entity.Item.of_entities_string q42_string in
+      q42#label_opt "fake language") 
   let description () =
     Alcotest.(check string) "Description" "English writer and humorist"
     ((Wikidata.Entity.Item.of_entities_string q42_string)#description "en")
+
+  let description_exn () =
+    Alcotest.check_raises "Description exn" Not_found ( fun () ->
+      let _ = (Wikidata.Entity.Item.of_entities_string q42_string)#description "fake lang" in 
+      ())
+
+  let description_opt () =
+    Alcotest.(check @@ option string) "Some" (Some "English writer and humorist")
+    ((Wikidata.Entity.Item.of_entities_string q42_string)#description_opt "en")
 
   let aliases () =
     Alcotest.(check @@ list string) "Aliases"
       ["Douglas Noel Adams"; "Douglas Noël Adams"; "Douglas N. Adams"]
       ((Wikidata.Entity.Item.of_entities_string q42_string)#aliases "en")
+  
+  let aliases_empty () =
+    Alcotest.(check @@ list string) "Empty" []
+      ((Wikidata.Entity.Item.of_entities_string q42_string)#aliases "fake lang")
+    
 
   let get_property () =
     Alcotest.(check string) "Get property" "Q14623683" (
@@ -34,6 +60,29 @@ module Q42 = struct
       | Wikidata.Snak.Value (Wikidata.Snak.Item {id; _}) -> id
       | _ -> raise Not_found
       )
+  
+  let get_property_truthy () =
+    Alcotest.(check @@ list string) "Truthy P735" ["Q463035"] (
+      let open Wikidata in
+      let q42 = Entity.Item.of_entities_string q42_string in
+      let truthy = q42#truthy_statements "P735" in
+      List.map 
+        (fun (s : Wikidata.Statement.t) -> match s.mainsnak with
+          | Value (Item {id; _}) -> id
+          | _ -> Alcotest.fail "Wrong data type")
+        truthy
+    )
+  let get_property_not_truthy () =
+    Alcotest.(check @@ list string) "Not Truthy P735" ["Q463035"; "Q19688263"] (
+      let open Wikidata in
+      let q42 = Entity.Item.of_entities_string q42_string in
+      let truthy = q42#statements "P735" in
+      List.map 
+        (fun (s : Wikidata.Statement.t) -> match s.mainsnak with
+          | Value (Item {id; _}) -> id
+          | _ -> Alcotest.fail "Wrong data type")
+        truthy
+    )
 end
 
 module Q691283 = struct
@@ -66,7 +115,7 @@ end
 let make_file_test dir f =
   let test () = 
     let s = read_whole_file (dir ^ "/" ^ f) in
-    let _ = Wikidata.Entity.Item.of_entities_string s in () in
+    let _ = Wikidata.Entity.of_entities_string s in () in
   Alcotest.test_case f `Quick test
 
 let automated_tests () =
@@ -81,11 +130,18 @@ let () =
       "Q42 - Basic Tests", [
         test_case "ID" `Quick Q42.id;
         test_case "label" `Quick Q42.label;
+        test_case "label exn" `Quick Q42.label_exn;
+        test_case "label opt" `Quick Q42.label_opt;
         test_case "description" `Quick Q42.description;
+        test_case "desc exn" `Quick Q42.description_exn;
+        test_case "desc opt" `Quick Q42.description_opt;
         test_case "aliases" `Quick Q42.aliases;
+        test_case "aliases empty" `Quick Q42.aliases_empty;
         ];
       "Q42 - Complex Tests", [
         test_case "get property" `Quick Q42.get_property;
+        test_case "prop truthy" `Quick Q42.get_property_truthy;
+        test_case "not truthy" `Quick Q42.get_property_not_truthy;
       ];
       "Q691283 - Complex Tests", [
         test_case "access snak" `Quick Q691283.snak;
