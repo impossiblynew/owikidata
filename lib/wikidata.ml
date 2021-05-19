@@ -2,7 +2,7 @@
 open Cohttp
 open Cohttp_lwt_unix*)
 
-module InternalJsonRep = Json_parsing_j
+module InternalJsonRep = Json_parsing.Json_parsing_j
 
 exception Bad_json_data of string
 exception Not_implemented
