@@ -1,0 +1,18 @@
+(library
+ (name json_parsing)
+ (libraries yojson atdgen-runtime)
+ (package wikidata))
+
+(rule
+ (targets json_parsing_j.ml json_parsing_j.mli)
+ (deps json_parsing.atd)
+ (mode promote)
+ (action
+  (run atdgen -j -j-std %{deps})))
+
+(rule
+ (targets json_parsing_t.ml json_parsing_t.mli)
+ (deps json_parsing.atd)
+ (mode promote)
+ (action
+  (run atdgen -t %{deps})))
